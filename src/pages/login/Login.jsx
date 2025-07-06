@@ -1,4 +1,4 @@
-import { GraduationCap} from 'lucide-react';
+import { GraduationCap } from 'lucide-react';
 import { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -16,19 +16,19 @@ const Login = () => {
         console.log(user);
 
         if (email === 'admin@example.com' && password === 'admin123') {
-            navigate('/'); 
+            navigate('/');
         } else {
             alert('Invalid email or password');
         }
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-blue-50 px-4">
-            <div className="w-full max-w-md bg-white rounded-2xl shadow-md p-8">
+        <div className="min-h-screen flex md:items-center justify-center bg-blue-50 px-4 sm:px-6">
+            <div className="h-[350px] w-[400px] my-32 bg-white rounded-2xl shadow-md p-6 sm:p-8">
                 <div>
                     <h2 className="text-2xl font-bold flex items-center text-gray-800 mb-4">
-                    <GraduationCap color="#83bfd2" />IST
-                </h2>
+                        <GraduationCap color="#83bfd2" />IST
+                    </h2>
                 </div>
                 <h4 className='text-gray-400 mb-2 font-semibold'>
                     Login to your account
