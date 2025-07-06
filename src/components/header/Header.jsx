@@ -20,19 +20,23 @@ const Header = ({ name = "Maruf Ahmed", role = "admin", profileUrl }) => {
             </div>
 
             <div className="flex items-center gap-4 w-full sm:w-auto justify-end flex-1 sm:flex-none">
-                <div className="text-sm md:flex text-gray-500 hidden sm:block">
-                    Announcement<Megaphone color="#83bfd2" />
-                </div>
+                <Link to="/announcement" >
+                    <div className="text-sm md:flex text-gray-500 hidden sm:block">
+                        Announcement<Megaphone color="#83bfd2" />
+                    </div>
+                </Link>
                 <div className="flex items-center gap-3">
                     <div className="text-right leading-tight">
                         <p className="text-sm font-semibold text-gray-800">{name}</p>
                         <p className="text-xs text-gray-500 capitalize">{role}</p>
                     </div>
-                    <img
-                        src={profileUrl || "https://i.pravatar.cc/40?img=12"}
-                        alt="Profile"
-                        className="w-10 h-10 rounded-full border border-gray-300"
-                    />
+                    <Link to="/profile">
+                        <img
+                            src={profileUrl || "https://i.pravatar.cc/40?img=12"}
+                            alt="Profile"
+                            className="w-10 h-10 rounded-full border border-gray-300"
+                        />
+                    </Link>
                 </div>
             </div>
         </header>

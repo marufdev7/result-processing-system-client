@@ -1,14 +1,18 @@
 import React from 'react';
 import Header from '../components/header/Header';
 import { Outlet } from 'react-router-dom';
-import Footer from '../components/footer/Footer';
+import Sidebar from '../components/sideBar/sideBar';
 
 const Main = () => {
     return (
-        <div>
+        <div className="min-h-screen flex flex-col bg-gray-50">
             <Header />
-            <Outlet />
-            <Footer/>
+            <div className="flex flex-1">
+                <Sidebar />
+                <main className="flex-1 p-4 overflow-y-auto">
+                    <Outlet />
+                </main>
+            </div>
         </div>
     );
 };
