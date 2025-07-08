@@ -19,17 +19,17 @@ import Logout from '../../pages/Logout/Logout';
 const router = createBrowserRouter([
     {
         path: "/login",
-        element: <Login/>,
+        element: <Login />,
     },
     {
         path: "/",
         element: <Main />,
-        errorElement: <ErrorPage/>,
+        errorElement: <ErrorPage />,
         children: [
             {
                 path: "/",
                 element: <Home />
-        },
+            },
             {
                 path: "/students",
                 element: <Students />,
@@ -68,7 +68,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "settings",
-                element: <Settings/>
+                element: <Settings />
             },
             {
                 path: "logout",
