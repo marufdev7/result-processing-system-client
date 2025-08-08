@@ -39,7 +39,7 @@ const Sidebar = () => {
         }`;
 
     return (
-        <aside className="w-full sm:w-64 bg-white p-4 shadow-md mt-4 rounded-lg">
+        <aside className="w-full bg-white p-4 shadow-md mt-4 rounded-lg">
 
             <div className="text-xs font-semibold text-gray-500 uppercase mb-2">Menu</div>
             <nav className="space-y-1 mb-4">
