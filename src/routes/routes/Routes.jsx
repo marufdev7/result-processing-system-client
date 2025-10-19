@@ -13,8 +13,10 @@ import Results from '../../pages/Results/Results';
 import Announcement from '../../pages/Announcement/Announcement';
 import Profile from '../../pages/Profile/Profile';
 import Settings from '../../pages/Settings/Settings';
+import Admin from '../../pages/Admin/Admin';
 import Home from '../../pages/Home.jsx/Home';
 import Logout from '../../pages/Logout/Logout';
+import PrivateRoute from '../privateRoute/PrivateRoute';
 
 const router = createBrowserRouter([
     {
@@ -23,37 +25,75 @@ const router = createBrowserRouter([
     },
     {
         path: "/",
-        element: <Main />,
+        element: (
+            <PrivateRoute>
+                <Main />
+            </PrivateRoute>
+        ),
         errorElement: <ErrorPage />,
         children: [
             {
                 path: "/",
                 element: <Home />
             },
+            // Admin-only routes
             {
                 path: "/students",
-                element: <Students />,
+                element: (
+                    <PrivateRoute adminOnly>
+                        <Students />
+                    </PrivateRoute>
+                ),
             },
             {
                 path: "teachers",
-                element: <Teachers />,
+                element: (
+                    <PrivateRoute adminOnly>
+                        <Teachers />
+                    </PrivateRoute>
+                ),
             },
             {
                 path: "subjects",
-                element: <Subjects />,
+                element: (
+                    <PrivateRoute adminOnly>
+                        <Subjects />
+                    </PrivateRoute>
+                ),
             },
             {
                 path: "classes",
-                element: <Classes />,
+                element: (
+                    <PrivateRoute adminOnly>
+                        <Classes />
+                    </PrivateRoute>
+                ),
             },
             {
                 path: "exams",
-                element: <Exams />,
+                element: (
+                    <PrivateRoute adminOnly>
+                        <Exams />
+                    </PrivateRoute>
+                ),
             },
             {
                 path: "assignments",
-                element: <Assignments />,
+                element: (
+                    <PrivateRoute adminOnly>
+                        <Assignments />
+                    </PrivateRoute>
+                ),
             },
+            {
+                path: "admin",
+                element: (
+                    <PrivateRoute adminOnly>
+                        <Admin />
+                    </PrivateRoute>
+                ),
+            },
+            // Shared routes (both admin and student can access)
             {
                 path: "results",
                 element: <Results />,
