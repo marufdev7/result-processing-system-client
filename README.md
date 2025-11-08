@@ -180,38 +180,32 @@ const calculatedGPA = filteredResults.length > 0 && totalCredits > 0 ?
 - Progress tracking towards graduation requirements
 
 ## For Student Login
-StudentPortal/
-└── src/
-    ├── components/
-    ├── pages/
-    │   ├── Dashboard/
-    │   ├── MyResults/
-    │   ├── Announcements/
-    │   └── Account/
-    │       └── Logout/
-    ├── services/
-    ├── utils/
-    └── assets/
+```javascript
+{
+Student Portal
+├── Dashboard
+├── My Results
+├── Announcements
+└── Logout (Account section)
+}
+```
 
 ## For Admin Login
-AdministratorPanel/
-└── src/
-    ├── components/
-    ├── pages/
-    │   ├── Dashboard/
-    │   ├── Teachers/
-    │   ├── Students/
-    │   ├── Subjects/
-    │   ├── Classes/
-    │   ├── Exams/
-    │   ├── Assignments/
-    │   ├── Results/
-    │   ├── Announcements/
-    │   ├── SystemAdmin/
-    │   ├── Profile/
-    │   ├── Settings/
-    │   └── Account/
-    │       └── Logout/
-    ├── services/
-    ├── utils/
-    └── assets/
+```javascript
+{
+Administrator
+├── Dashboard
+├── Teachers
+├── Students
+├── Subjects
+├── Classes
+├── Exams
+├── Assignments
+├── Results
+├── Announcements
+├── System Admin
+├── Profile
+├── Settings
+└── Logout
+}
+```
