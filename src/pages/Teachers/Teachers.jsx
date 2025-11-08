@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { 
-    Search, 
-    Plus, 
-    Edit, 
-    Trash2, 
-    Eye, 
+import {
+    Search,
+    Plus,
+    Edit,
+    Trash2,
+    Eye,
     Filter,
     Download,
     Upload,
@@ -29,74 +29,104 @@ const Teachers = () => {
     const [teachers, setTeachers] = useState([
         {
             id: 'TEA001',
-            name: 'Dr. Alice Johnson',
-            email: 'alice.johnson@school.edu',
-            phone: '+1-555-0201',
-            department: 'Mathematics',
-            subjects: ['Algebra', 'Calculus', 'Statistics'],
-            qualification: 'Ph.D. in Mathematics',
-            experience: '8 years',
-            dateOfJoining: '2016-08-15',
-            address: '123 Academic Ave, City',
+            name: 'Engr. Farhana Akter',
+            email: 'farhana.akter@university.edu.bd',
+            phone: '+88-01712345678',
+            department: 'Computer Science and Engineering',
+            subjects: ['Data Structures', 'Algorithms', 'Object Oriented Programming'],
+            qualification: 'M.Sc. in Computer Science',
+            experience: '6 years',
+            dateOfJoining: '2018-07-12',
+            address: 'Mirpur, Dhaka',
             status: 'Active',
-            salary: '$65000',
-            classesAssigned: ['Class 10A', 'Class 11B']
+            salary: '৳75,000',
+            classesAssigned: ['CSE']
         },
         {
             id: 'TEA002',
-            name: 'Prof. Michael Brown',
-            email: 'michael.brown@school.edu',
-            phone: '+1-555-0202',
-            department: 'Physics',
-            subjects: ['Physics', 'Applied Physics'],
-            qualification: 'M.Sc. in Physics',
+            name: 'Prof. Mahfuz Rahman',
+            email: 'mahfuz.rahman@university.edu.bd',
+            phone: '+88-01687451236',
+            department: 'Electrical and Computer Engineering',
+            subjects: ['Digital Electronics', 'Microprocessors', 'Embedded Systems'],
+            qualification: 'Ph.D. in Electrical Engineering',
             experience: '12 years',
             dateOfJoining: '2012-09-01',
-            address: '456 Science Blvd, City',
+            address: 'Uttara, Dhaka',
             status: 'Active',
-            salary: '$70000',
-            classesAssigned: ['Class 11A', 'Class 12A']
+            salary: '৳95,000',
+            classesAssigned: ['ECE']
         },
         {
             id: 'TEA003',
-            name: 'Ms. Sarah Davis',
-            email: 'sarah.davis@school.edu',
-            phone: '+1-555-0203',
-            department: 'English',
-            subjects: ['English Literature', 'Grammar'],
-            qualification: 'M.A. in English Literature',
-            experience: '6 years',
-            dateOfJoining: '2018-07-20',
-            address: '789 Literature Lane, City',
+            name: 'Dr. Kamrul Hasan',
+            email: 'kamrul.hasan@business.edu.bd',
+            phone: '+88-01896321457',
+            department: 'Business Administration',
+            subjects: ['Principles of Management', 'Marketing', 'Organizational Behavior'],
+            qualification: 'Ph.D. in Business Administration',
+            experience: '10 years',
+            dateOfJoining: '2014-02-10',
+            address: 'Dhanmondi, Dhaka',
             status: 'Active',
-            salary: '$58000',
-            classesAssigned: ['Class 9A', 'Class 10B']
+            salary: '৳88,000',
+            classesAssigned: ['BBA']
         },
         {
             id: 'TEA004',
-            name: 'Dr. Robert Wilson',
-            email: 'robert.wilson@school.edu',
-            phone: '+1-555-0204',
-            department: 'Chemistry',
-            subjects: ['Organic Chemistry', 'Inorganic Chemistry'],
-            qualification: 'Ph.D. in Chemistry',
-            experience: '15 years',
-            dateOfJoining: '2009-01-10',
-            address: '321 Chemical Rd, City',
-            status: 'On Leave',
-            salary: '$75000',
-            classesAssigned: ['Class 11A', 'Class 12B']
+            name: 'Engr. Saiful Islam',
+            email: 'saiful.islam@polytechnic.edu.bd',
+            phone: '+88-01758463291',
+            department: 'Electrical Technology',
+            subjects: ['Electrical Circuits', 'Power Systems', 'Control Engineering'],
+            qualification: 'B.Sc. in Electrical Engineering',
+            experience: '9 years',
+            dateOfJoining: '2016-03-20',
+            address: 'Mohammadpur, Dhaka',
+            status: 'Active',
+            salary: '৳70,000',
+            classesAssigned: ['Diploma']
+        },
+        {
+            id: 'TEA005',
+            name: 'Dr. Rasheda Begum',
+            email: 'rasheda.begum@university.edu.bd',
+            phone: '+88-01987456321',
+            department: 'Electrical and Computer Engineering',
+            subjects: ['Signal Processing', 'Communication Systems', 'Analog Electronics'],
+            qualification: 'Ph.D. in Telecommunication Engineering',
+            experience: '11 years',
+            dateOfJoining: '2013-06-25',
+            address: 'Banani, Dhaka',
+            status: 'Active',
+            salary: '৳92,000',
+            classesAssigned: ['ECE']
+        },
+        {
+            id: 'TEA006',
+            name: 'Lect. Nazia Rahman',
+            email: 'nazia.rahman@university.edu.bd',
+            phone: '+88-01547896523',
+            department: 'Computer Science and Engineering',
+            subjects: ['Database Systems', 'Web Development', 'Computer Networks'],
+            qualification: 'M.Sc. in Information Technology',
+            experience: '5 years',
+            dateOfJoining: '2019-11-10',
+            address: 'Khilgaon, Dhaka',
+            status: 'Active',
+            salary: '৳68,000',
+            classesAssigned: ['CSE']
         }
     ]);
 
-    const departments = ['all', 'Mathematics', 'Physics', 'Chemistry', 'English', 'Biology', 'History', 'Geography'];
+    const departments = ['all', 'CSE', 'ECE', 'BBA', 'Diploma'];
 
     // Filter teachers based on search term and selected department
     const filteredTeachers = teachers.filter(teacher => {
         const matchesSearch = teacher.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                            teacher.id.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                            teacher.email.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                            teacher.subjects.some(subject => subject.toLowerCase().includes(searchTerm.toLowerCase()));
+            teacher.id.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            teacher.email.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            teacher.subjects.some(subject => subject.toLowerCase().includes(searchTerm.toLowerCase()));
         const matchesDepartment = selectedDepartment === 'all' || teacher.department === selectedDepartment;
         return matchesSearch && matchesDepartment;
     });
@@ -152,7 +182,7 @@ const Teachers = () => {
                 };
                 setTeachers([...teachers, newTeacher]);
             } else if (modalType === 'edit') {
-                setTeachers(teachers.map(teacher => 
+                setTeachers(teachers.map(teacher =>
                     teacher.id === selectedTeacher.id ? { ...teacher, ...formData } : teacher
                 ));
             }
@@ -178,10 +208,10 @@ const Teachers = () => {
                 <div className="bg-white rounded-lg p-6 w-full max-w-2xl max-h-screen overflow-y-auto">
                     <div className="flex justify-between items-center mb-6">
                         <h2 className="text-2xl font-bold text-gray-800">
-                            {modalType === 'add' ? 'Add New Teacher' : 
-                             modalType === 'edit' ? 'Edit Teacher' : 'Teacher Details'}
+                            {modalType === 'add' ? 'Add New Teacher' :
+                                modalType === 'edit' ? 'Edit Teacher' : 'Teacher Details'}
                         </h2>
-                        <button 
+                        <button
                             onClick={() => setShowModal(false)}
                             className="text-gray-500 hover:text-gray-700"
                         >
@@ -392,7 +422,7 @@ const Teachers = () => {
                         <Upload className="w-4 h-4 mr-2" />
                         Import
                     </button>
-                    <button 
+                    <button
                         onClick={handleAddTeacher}
                         className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                     >
@@ -548,11 +578,10 @@ const Teachers = () => {
                                         <div className="text-sm text-gray-500">Since: {teacher.dateOfJoining}</div>
                                     </td>
                                     <td className="px-6 py-4 whitespace-nowrap">
-                                        <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${
-                                            teacher.status === 'Active' ? 'bg-green-100 text-green-800' :
+                                        <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${teacher.status === 'Active' ? 'bg-green-100 text-green-800' :
                                             teacher.status === 'On Leave' ? 'bg-yellow-100 text-yellow-800' :
-                                            'bg-red-100 text-red-800'
-                                        }`}>
+                                                'bg-red-100 text-red-800'
+                                            }`}>
                                             {teacher.status}
                                         </span>
                                     </td>
@@ -592,8 +621,8 @@ const Teachers = () => {
                         <Users className="mx-auto h-12 w-12 text-gray-400" />
                         <h3 className="mt-2 text-sm font-medium text-gray-900">No teachers found</h3>
                         <p className="mt-1 text-sm text-gray-500">
-                            {searchTerm || selectedDepartment !== 'all' 
-                                ? 'Try adjusting your search or filter criteria.' 
+                            {searchTerm || selectedDepartment !== 'all'
+                                ? 'Try adjusting your search or filter criteria.'
                                 : 'Get started by adding a new teacher.'}
                         </p>
                     </div>

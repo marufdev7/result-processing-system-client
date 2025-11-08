@@ -46,10 +46,9 @@ const Header = () => {
                     <div className="flex items-center text-gray-600 hover:text-gray-800">
                         <Bell className="w-5 h-5" />
                         <span className="hidden sm:inline ml-1 text-sm">Notifications</span>
-                        <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">3</span>
                     </div>
                 </Link>
-                
+
                 <div className="flex items-center gap-3">
                     <div className="text-right leading-tight">
                         <p className="text-sm font-semibold text-gray-800">{user?.name || 'User'}</p>

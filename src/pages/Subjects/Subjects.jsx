@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { 
-    Search, 
-    Plus, 
-    Edit, 
-    Trash2, 
-    Eye, 
+import {
+    Search,
+    Plus,
+    Edit,
+    Trash2,
+    Eye,
     Filter,
     Download,
     Upload,
@@ -27,98 +27,166 @@ const Subjects = () => {
     const [subjects, setSubjects] = useState([
         {
             id: 'SUB001',
-            name: 'Mathematics',
-            code: 'MATH101',
-            department: 'Mathematics',
-            description: 'Fundamental mathematics including algebra, geometry, and calculus',
-            credits: 4,
-            duration: '1 Year',
-            totalClasses: 120,
-            teacher: 'Dr. Alice Johnson',
+            name: 'Data Structures',
+            code: 'CSE201',
+            department: 'Computer Science and Engineering',
+            description: 'Study of linear and non-linear data structures such as stacks, queues, linked lists, trees, and graphs.',
+            credits: 3,
+            duration: '1 Semester',
+            totalClasses: 42,
+            teacher: 'Engr. Farhana Akter',
             teacherId: 'TEA001',
-            prerequisites: ['Basic Algebra'],
-            syllabus: ['Algebra', 'Geometry', 'Trigonometry', 'Calculus'],
-            grades: ['9', '10', '11', '12'],
+            prerequisites: ['Introduction to Programming'],
+            syllabus: ['Arrays', 'Stacks and Queues', 'Linked Lists', 'Trees', 'Graphs', 'Sorting Algorithms'],
+            grades: ['Undergraduate'],
             status: 'Active',
-            enrolledStudents: 85
+            enrolledStudents: 48
         },
         {
             id: 'SUB002',
-            name: 'Physics',
-            code: 'PHY101',
-            department: 'Science',
-            description: 'Introduction to physics covering mechanics, thermodynamics, and electromagnetism',
-            credits: 4,
-            duration: '1 Year',
-            totalClasses: 100,
-            teacher: 'Prof. Michael Brown',
+            name: 'Digital Electronics',
+            code: 'ECE203',
+            department: 'Electrical and Computer Engineering',
+            description: 'Introduction to logic gates, combinational and sequential circuits, and digital system design.',
+            credits: 3,
+            duration: '1 Semester',
+            totalClasses: 45,
+            teacher: 'Prof. Mahfuz Rahman',
             teacherId: 'TEA002',
-            prerequisites: ['Mathematics'],
-            syllabus: ['Mechanics', 'Thermodynamics', 'Electricity', 'Magnetism'],
-            grades: ['11', '12'],
+            prerequisites: ['Basic Electrical Engineering'],
+            syllabus: ['Number Systems', 'Logic Gates', 'Flip-Flops', 'Counters', 'Registers', 'Combinational Circuits'],
+            grades: ['Undergraduate'],
             status: 'Active',
-            enrolledStudents: 65
+            enrolledStudents: 41
         },
         {
             id: 'SUB003',
-            name: 'Chemistry',
-            code: 'CHEM101',
-            department: 'Science',
-            description: 'Basic chemistry concepts including organic and inorganic chemistry',
-            credits: 4,
-            duration: '1 Year',
-            totalClasses: 110,
-            teacher: 'Dr. Robert Wilson',
-            teacherId: 'TEA004',
-            prerequisites: ['Basic Science'],
-            syllabus: ['Atomic Structure', 'Chemical Bonding', 'Organic Chemistry', 'Inorganic Chemistry'],
-            grades: ['11', '12'],
+            name: 'Database Systems',
+            code: 'CSE305',
+            department: 'Computer Science and Engineering',
+            description: 'Design and management of databases including ER modeling, normalization, and SQL programming.',
+            credits: 3,
+            duration: '1 Semester',
+            totalClasses: 40,
+            teacher: 'Lect. Nazia Rahman',
+            teacherId: 'TEA006',
+            prerequisites: ['Data Structures'],
+            syllabus: ['ER Model', 'Normalization', 'SQL', 'Transactions', 'Indexing', 'Query Optimization'],
+            grades: ['Undergraduate'],
             status: 'Active',
-            enrolledStudents: 58
+            enrolledStudents: 50
         },
         {
             id: 'SUB004',
-            name: 'English Literature',
-            code: 'ENG101',
-            department: 'Languages',
-            description: 'Study of English literature, grammar, and composition',
+            name: 'Operating Systems',
+            code: 'CSE306',
+            department: 'Computer Science and Engineering',
+            description: 'Concepts of process management, memory management, file systems, and synchronization mechanisms.',
             credits: 3,
-            duration: '1 Year',
-            totalClasses: 90,
-            teacher: 'Ms. Sarah Davis',
-            teacherId: 'TEA003',
-            prerequisites: [],
-            syllabus: ['Grammar', 'Literature', 'Composition', 'Poetry'],
-            grades: ['9', '10', '11', '12'],
+            duration: '1 Semester',
+            totalClasses: 42,
+            teacher: 'Engr. Farhana Akter',
+            teacherId: 'TEA001',
+            prerequisites: ['Computer Architecture'],
+            syllabus: ['Processes and Threads', 'Scheduling', 'Memory Management', 'File Systems', 'Deadlocks'],
+            grades: ['Undergraduate'],
             status: 'Active',
-            enrolledStudents: 120
+            enrolledStudents: 47
         },
         {
             id: 'SUB005',
-            name: 'Computer Science',
-            code: 'CS101',
-            department: 'Technology',
-            description: 'Introduction to programming and computer science fundamentals',
+            name: 'Financial Accounting',
+            code: 'BBA104',
+            department: 'Business Administration',
+            description: 'Introduction to accounting principles, preparation of financial statements, and accounting cycle.',
             credits: 3,
-            duration: '1 Year',
-            totalClasses: 80,
-            teacher: 'Mr. Tech Teacher',
+            duration: '1 Semester',
+            totalClasses: 38,
+            teacher: 'Dr. Kamrul Hasan',
+            teacherId: 'TEA003',
+            prerequisites: ['Principles of Management'],
+            syllabus: ['Journal Entries', 'Ledger', 'Trial Balance', 'Income Statement', 'Balance Sheet'],
+            grades: ['Undergraduate'],
+            status: 'Active',
+            enrolledStudents: 53
+        },
+        {
+            id: 'SUB006',
+            name: 'Signal Processing',
+            code: 'ECE307',
+            department: 'Electrical and Computer Engineering',
+            description: 'Introduction to discrete-time signals, systems, and transforms with MATLAB applications.',
+            credits: 3,
+            duration: '1 Semester',
+            totalClasses: 40,
+            teacher: 'Dr. Rasheda Begum',
             teacherId: 'TEA005',
-            prerequisites: ['Basic Mathematics'],
-            syllabus: ['Programming Basics', 'Data Structures', 'Algorithms', 'Web Development'],
-            grades: ['10', '11', '12'],
-            status: 'Inactive',
-            enrolledStudents: 0
+            prerequisites: ['Digital Electronics', 'Linear Algebra'],
+            syllabus: ['Fourier Transform', 'Z-Transform', 'Filtering', 'Sampling', 'Convolution', 'Spectral Analysis'],
+            grades: ['Undergraduate'],
+            status: 'Active',
+            enrolledStudents: 37
+        },
+        {
+            id: 'SUB007',
+            name: 'Electrical Circuits',
+            code: 'DIP105',
+            department: 'Electrical Technology',
+            description: 'Study of fundamental circuit laws, AC/DC circuit analysis, and network theorems.',
+            credits: 3,
+            duration: '1 Semester',
+            totalClasses: 42,
+            teacher: 'Engr. Saiful Islam',
+            teacherId: 'TEA004',
+            prerequisites: ['Basic Physics'],
+            syllabus: ['Ohm’s Law', 'Kirchhoff’s Laws', 'AC/DC Circuits', 'Thevenin’s Theorem', 'Superposition'],
+            grades: ['Diploma'],
+            status: 'Active',
+            enrolledStudents: 39
+        },
+        {
+            id: 'SUB008',
+            name: 'Principles of Management',
+            code: 'BBA102',
+            department: 'Business Administration',
+            description: 'Introduction to management theories, organizational structures, leadership, and motivation.',
+            credits: 3,
+            duration: '1 Semester',
+            totalClasses: 36,
+            teacher: 'Dr. Kamrul Hasan',
+            teacherId: 'TEA003',
+            prerequisites: ['Business Fundamentals'],
+            syllabus: ['Planning', 'Organizing', 'Leading', 'Controlling', 'Motivation', 'Decision Making'],
+            grades: ['Undergraduate'],
+            status: 'Active',
+            enrolledStudents: 55
+        },
+        {
+            id: 'SUB009',
+            name: 'Computer Networks',
+            code: 'CSE308',
+            department: 'Computer Science and Engineering',
+            description: 'Study of network models, protocols, topologies, and data communication principles.',
+            credits: 3,
+            duration: '1 Semester',
+            totalClasses: 40,
+            teacher: 'Lect. Nazia Rahman',
+            teacherId: 'TEA006',
+            prerequisites: ['Operating Systems'],
+            syllabus: ['OSI Model', 'TCP/IP', 'Routing', 'Switching', 'Network Security', 'Wireless Networks'],
+            grades: ['Undergraduate'],
+            status: 'Active',
+            enrolledStudents: 44
         }
     ]);
 
-    const departments = ['all', 'Mathematics', 'Science', 'Languages', 'Technology', 'Arts', 'Social Science'];
+    const departments = ['all', 'CSE', 'ECE', 'BBA', 'Diploma'];
 
     // Filter subjects based on search term and selected department
     const filteredSubjects = subjects.filter(subject => {
         const matchesSearch = subject.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                            subject.code.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                            subject.teacher.toLowerCase().includes(searchTerm.toLowerCase());
+            subject.code.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            subject.teacher.toLowerCase().includes(searchTerm.toLowerCase());
         const matchesDepartment = selectedDepartment === 'all' || subject.department === selectedDepartment;
         return matchesSearch && matchesDepartment;
     });
@@ -176,7 +244,7 @@ const Subjects = () => {
                 };
                 setSubjects([...subjects, newSubject]);
             } else if (modalType === 'edit') {
-                setSubjects(subjects.map(subject => 
+                setSubjects(subjects.map(subject =>
                     subject.id === selectedSubject.id ? { ...subject, ...formData } : subject
                 ));
             }
@@ -203,10 +271,10 @@ const Subjects = () => {
                 <div className="bg-white rounded-lg p-6 w-full max-w-3xl max-h-screen overflow-y-auto">
                     <div className="flex justify-between items-center mb-6">
                         <h2 className="text-2xl font-bold text-gray-800">
-                            {modalType === 'add' ? 'Add New Subject' : 
-                             modalType === 'edit' ? 'Edit Subject' : 'Subject Details'}
+                            {modalType === 'add' ? 'Add New Subject' :
+                                modalType === 'edit' ? 'Edit Subject' : 'Subject Details'}
                         </h2>
-                        <button 
+                        <button
                             onClick={() => setShowModal(false)}
                             className="text-gray-500 hover:text-gray-700"
                         >
@@ -233,10 +301,9 @@ const Subjects = () => {
                                     <h3 className="font-semibold text-gray-800 mb-3">Teaching Details</h3>
                                     <div className="space-y-2">
                                         <p><span className="font-medium">Teacher:</span> {selectedSubject.teacher}</p>
-                                        <p><span className="font-medium">Status:</span> 
-                                            <span className={`ml-2 px-2 py-1 rounded text-sm ${
-                                                selectedSubject.status === 'Active' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
-                                            }`}>
+                                        <p><span className="font-medium">Status:</span>
+                                            <span className={`ml-2 px-2 py-1 rounded text-sm ${selectedSubject.status === 'Active' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
+                                                }`}>
                                                 {selectedSubject.status}
                                             </span>
                                         </p>
@@ -253,22 +320,22 @@ const Subjects = () => {
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div className="bg-gray-50 p-4 rounded-lg">
                                 <h3 className="font-semibold text-gray-800 mb-3">Description</h3>
                                 <p className="text-gray-700">{selectedSubject.description}</p>
                             </div>
-                            
+
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div className="bg-gray-50 p-4 rounded-lg">
                                     <h3 className="font-semibold text-gray-800 mb-3">Prerequisites</h3>
                                     <div className="flex flex-wrap gap-2">
-                                        {selectedSubject.prerequisites.length > 0 ? 
+                                        {selectedSubject.prerequisites.length > 0 ?
                                             selectedSubject.prerequisites.map((prereq, index) => (
                                                 <span key={index} className="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-sm">
                                                     {prereq}
                                                 </span>
-                                            )) : 
+                                            )) :
                                             <span className="text-gray-500 text-sm">No prerequisites</span>
                                         }
                                     </div>
@@ -518,7 +585,7 @@ const Subjects = () => {
                         <Download className="w-4 h-4 mr-2" />
                         Export
                     </button>
-                    <button 
+                    <button
                         onClick={handleAddSubject}
                         className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                     >
@@ -617,16 +684,15 @@ const Subjects = () => {
                                     <h3 className="text-lg font-semibold text-gray-800">{subject.name}</h3>
                                     <p className="text-sm text-gray-500">{subject.code}</p>
                                 </div>
-                                <span className={`px-2 py-1 text-xs font-semibold rounded-full ${
-                                    subject.status === 'Active' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
-                                }`}>
+                                <span className={`px-2 py-1 text-xs font-semibold rounded-full ${subject.status === 'Active' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
+                                    }`}>
                                     {subject.status}
                                 </span>
                             </div>
-                            
+
                             <div className="space-y-3">
                                 <p className="text-sm text-gray-700 line-clamp-2">{subject.description}</p>
-                                
+
                                 <div className="flex items-center text-sm text-gray-600">
                                     <GraduationCap className="w-4 h-4 mr-2" />
                                     Teacher: {subject.teacher}
@@ -644,7 +710,7 @@ const Subjects = () => {
                                     {subject.totalClasses} classes • {subject.credits} credits
                                 </div>
                             </div>
-                            
+
                             <div className="mt-4">
                                 <p className="text-sm text-gray-600 mb-2">Applicable Grades:</p>
                                 <div className="flex flex-wrap gap-1">
@@ -656,7 +722,7 @@ const Subjects = () => {
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div className="px-6 py-3 bg-gray-50 border-t">
                             <div className="flex items-center justify-between">
                                 <span className="text-sm text-gray-500">ID: {subject.id}</span>
@@ -694,8 +760,8 @@ const Subjects = () => {
                     <BookOpen className="mx-auto h-12 w-12 text-gray-400" />
                     <h3 className="mt-2 text-sm font-medium text-gray-900">No subjects found</h3>
                     <p className="mt-1 text-sm text-gray-500">
-                        {searchTerm || selectedDepartment !== 'all' 
-                            ? 'Try adjusting your search or filter criteria.' 
+                        {searchTerm || selectedDepartment !== 'all'
+                            ? 'Try adjusting your search or filter criteria.'
                             : 'Get started by adding a new subject.'}
                     </p>
                 </div>

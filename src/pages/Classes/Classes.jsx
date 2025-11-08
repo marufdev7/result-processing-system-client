@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { 
-    Search, 
-    Plus, 
-    Edit, 
-    Trash2, 
-    Eye, 
+import {
+    Search,
+    Plus,
+    Edit,
+    Trash2,
+    Eye,
     Filter,
     Download,
     Upload,
@@ -27,98 +27,122 @@ const Classes = () => {
     const [classes, setClasses] = useState([
         {
             id: 'CLS001',
-            name: 'Class 9A',
-            grade: '9',
+            name: 'CSE',
+            grade: 'Undergraduate',
             section: 'A',
-            classTeacher: 'Ms. Sarah Davis',
-            teacherId: 'TEA003',
-            subjects: ['Mathematics', 'Physics', 'Chemistry', 'English', 'Biology'],
-            students: ['STU003', 'STU010', 'STU015'],
-            totalStudents: 28,
-            capacity: 30,
-            room: 'Room 101',
+            classTeacher: 'Engr. Farhana Akter',
+            teacherId: 'TEA001',
+            subjects: [
+                'Data Structures',
+                'Operating Systems',
+                'Database Systems',
+                'Computer Networks',
+                'Mathematics'
+            ],
+            students: ['STU21001', 'STU21002', 'STU21003', 'STU21004'],
+            totalStudents: 42,
+            capacity: 45,
+            room: 'Lab 201',
             schedule: {
-                monday: ['Math', 'Physics', 'English', 'Chemistry', 'Biology'],
-                tuesday: ['English', 'Math', 'Chemistry', 'Physics', 'PE'],
-                wednesday: ['Biology', 'Math', 'English', 'Chemistry', 'Art'],
-                thursday: ['Physics', 'Chemistry', 'Math', 'English', 'History'],
-                friday: ['Math', 'Biology', 'Physics', 'English', 'Free']
+                sunday: ['Data Structures', 'Operating Systems', 'Mathematics', 'Database Systems', 'Computer Networks'],
+                monday: ['Operating Systems', 'Database Systems', 'Mathematics', 'Computer Networks', 'Lab'],
+                tuesday: ['Mathematics', 'Computer Networks', 'Data Structures', 'Operating Systems', 'Lab'],
+                wednesday: ['Database Systems', 'Mathematics', 'Computer Networks', 'English', 'Project Work'],
+                thursday: ['Operating Systems', 'Data Structures', 'Database Systems', 'Lab', 'Free']
             },
             status: 'Active'
         },
         {
             id: 'CLS002',
-            name: 'Class 10A',
-            grade: '10',
+            name: 'ECE',
+            grade: 'Undergraduate',
             section: 'A',
-            classTeacher: 'Dr. Alice Johnson',
-            teacherId: 'TEA001',
-            subjects: ['Mathematics', 'Physics', 'Chemistry', 'English', 'Computer Science'],
-            students: ['STU001', 'STU005', 'STU008'],
-            totalStudents: 25,
-            capacity: 30,
-            room: 'Room 201',
+            classTeacher: 'Prof. Mahfuz Rahman',
+            teacherId: 'TEA002',
+            subjects: [
+                'Digital Electronics',
+                'Signal Processing',
+                'Electrical Circuits',
+                'Computer Networks',
+                'Mathematics'
+            ],
+            students: ['STU21005', 'STU21006', 'STU21007', 'STU21008'],
+            totalStudents: 39,
+            capacity: 45,
+            room: 'Lab 203',
             schedule: {
-                monday: ['Math', 'Physics', 'Chemistry', 'English', 'CS'],
-                tuesday: ['Physics', 'Math', 'English', 'Chemistry', 'CS'],
-                wednesday: ['Chemistry', 'Math', 'Physics', 'English', 'Lab'],
-                thursday: ['English', 'Math', 'Physics', 'Chemistry', 'CS'],
-                friday: ['Math', 'Chemistry', 'Physics', 'English', 'Free']
+                sunday: ['Digital Electronics', 'Signal Processing', 'Mathematics', 'Electrical Circuits', 'Computer Networks'],
+                monday: ['Signal Processing', 'Mathematics', 'Electrical Circuits', 'Digital Electronics', 'Lab'],
+                tuesday: ['Electrical Circuits', 'Computer Networks', 'Signal Processing', 'Mathematics', 'Lab'],
+                wednesday: ['Digital Electronics', 'Mathematics', 'Electrical Circuits', 'Computer Networks', 'Free'],
+                thursday: ['Signal Processing', 'Mathematics', 'Digital Electronics', 'Lab', 'Project Work']
             },
             status: 'Active'
         },
         {
             id: 'CLS003',
-            name: 'Class 10B',
-            grade: '10',
-            section: 'B',
-            classTeacher: 'Ms. Sarah Davis',
+            name: 'BBA',
+            grade: 'Undergraduate',
+            section: 'A',
+            classTeacher: 'Dr. Kamrul Hasan',
             teacherId: 'TEA003',
-            subjects: ['Mathematics', 'Physics', 'Chemistry', 'English', 'Biology'],
-            students: ['STU002', 'STU009', 'STU012'],
-            totalStudents: 27,
-            capacity: 30,
-            room: 'Room 202',
+            subjects: [
+                'Financial Accounting',
+                'Principles of Management',
+                'Business Communication',
+                'Economics',
+                'Mathematics'
+            ],
+            students: ['STU21009', 'STU21010', 'STU21011', 'STU21012'],
+            totalStudents: 36,
+            capacity: 40,
+            room: 'Room 305',
             schedule: {
-                monday: ['English', 'Math', 'Physics', 'Chemistry', 'Biology'],
-                tuesday: ['Math', 'Chemistry', 'English', 'Physics', 'Biology'],
-                wednesday: ['Physics', 'Math', 'Chemistry', 'English', 'Lab'],
-                thursday: ['Chemistry', 'English', 'Math', 'Physics', 'Biology'],
-                friday: ['Math', 'Physics', 'Chemistry', 'English', 'Free']
+                sunday: ['Financial Accounting', 'Principles of Management', 'Mathematics', 'Business Communication', 'Economics'],
+                monday: ['Principles of Management', 'Economics', 'Mathematics', 'Financial Accounting', 'Free'],
+                tuesday: ['Economics', 'Business Communication', 'Mathematics', 'Principles of Management', 'Presentation'],
+                wednesday: ['Financial Accounting', 'Mathematics', 'Economics', 'English', 'Business Case Study'],
+                thursday: ['Business Communication', 'Economics', 'Principles of Management', 'Lab', 'Free']
             },
             status: 'Active'
         },
         {
             id: 'CLS004',
-            name: 'Class 11A',
-            grade: '11',
+            name: 'Diploma',
+            grade: 'Technical',
             section: 'A',
-            classTeacher: 'Prof. Michael Brown',
-            teacherId: 'TEA002',
-            subjects: ['Advanced Mathematics', 'Physics', 'Chemistry', 'English', 'Computer Science'],
-            students: ['STU004', 'STU011', 'STU014'],
-            totalStudents: 22,
-            capacity: 25,
-            room: 'Room 301',
+            classTeacher: 'Engr. Saiful Islam',
+            teacherId: 'TEA004',
+            subjects: [
+                'Electrical Circuits',
+                'Digital Electronics',
+                'Mathematics',
+                'Signal Processing',
+                'Computer Networks'
+            ],
+            students: ['STU21013', 'STU21014', 'STU21015', 'STU21016'],
+            totalStudents: 33,
+            capacity: 40,
+            room: 'Workshop 101',
             schedule: {
-                monday: ['Advanced Math', 'Physics', 'Chemistry', 'English', 'CS'],
-                tuesday: ['Physics', 'Advanced Math', 'English', 'Chemistry', 'CS'],
-                wednesday: ['Chemistry', 'Advanced Math', 'Physics', 'English', 'Lab'],
-                thursday: ['English', 'Advanced Math', 'Physics', 'Chemistry', 'CS'],
-                friday: ['Advanced Math', 'Chemistry', 'Physics', 'English', 'Project']
+                sunday: ['Electrical Circuits', 'Digital Electronics', 'Mathematics', 'Computer Networks', 'Signal Processing'],
+                monday: ['Digital Electronics', 'Signal Processing', 'Mathematics', 'Electrical Circuits', 'Workshop'],
+                tuesday: ['Signal Processing', 'Computer Networks', 'Mathematics', 'Electrical Circuits', 'Lab'],
+                wednesday: ['Electrical Circuits', 'Mathematics', 'Digital Electronics', 'Free', 'Workshop'],
+                thursday: ['Signal Processing', 'Electrical Circuits', 'Mathematics', 'Lab', 'Free']
             },
             status: 'Active'
         }
     ]);
 
-    const grades = ['all', '9', '10', '11', '12'];
+    const grades = ['all', 'CSE', 'ECE', 'BBA', 'Diploma'];
 
     // Filter classes based on search term and selected grade
     const filteredClasses = classes.filter(cls => {
         const matchesSearch = cls.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                            cls.id.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                            cls.classTeacher.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                            cls.room.toLowerCase().includes(searchTerm.toLowerCase());
+            cls.id.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            cls.classTeacher.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            cls.room.toLowerCase().includes(searchTerm.toLowerCase());
         const matchesGrade = selectedGrade === 'all' || cls.grade === selectedGrade;
         return matchesSearch && matchesGrade;
     });
@@ -180,9 +204,9 @@ const Classes = () => {
                 };
                 setClasses([...classes, newClass]);
             } else if (modalType === 'edit') {
-                setClasses(classes.map(cls => 
-                    cls.id === selectedClass.id ? { 
-                        ...cls, 
+                setClasses(classes.map(cls =>
+                    cls.id === selectedClass.id ? {
+                        ...cls,
                         ...formData,
                         name: `Class ${formData.grade}${formData.section}`
                     } : cls
@@ -210,10 +234,10 @@ const Classes = () => {
                 <div className="bg-white rounded-lg p-6 w-full max-w-4xl max-h-screen overflow-y-auto">
                     <div className="flex justify-between items-center mb-6">
                         <h2 className="text-2xl font-bold text-gray-800">
-                            {modalType === 'add' ? 'Add New Class' : 
-                             modalType === 'edit' ? 'Edit Class' : 'Class Details'}
+                            {modalType === 'add' ? 'Add New Class' :
+                                modalType === 'edit' ? 'Edit Class' : 'Class Details'}
                         </h2>
-                        <button 
+                        <button
                             onClick={() => setShowModal(false)}
                             className="text-gray-500 hover:text-gray-700"
                         >
@@ -247,7 +271,7 @@ const Classes = () => {
                                     </div>
                                 </div>
                             </div>
-                            
+
                             {/* Schedule */}
                             <div className="bg-gray-50 p-4 rounded-lg">
                                 <h3 className="font-semibold text-gray-800 mb-3">Weekly Schedule</h3>
@@ -438,7 +462,7 @@ const Classes = () => {
                         <Download className="w-4 h-4 mr-2" />
                         Export
                     </button>
-                    <button 
+                    <button
                         onClick={handleAddClass}
                         className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                     >
@@ -536,13 +560,12 @@ const Classes = () => {
                         <div className="p-6">
                             <div className="flex items-center justify-between mb-4">
                                 <h3 className="text-lg font-semibold text-gray-800">{cls.name}</h3>
-                                <span className={`px-2 py-1 text-xs font-semibold rounded-full ${
-                                    cls.status === 'Active' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
-                                }`}>
+                                <span className={`px-2 py-1 text-xs font-semibold rounded-full ${cls.status === 'Active' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
+                                    }`}>
                                     {cls.status}
                                 </span>
                             </div>
-                            
+
                             <div className="space-y-3">
                                 <div className="flex items-center text-sm text-gray-600">
                                     <GraduationCap className="w-4 h-4 mr-2" />
@@ -557,13 +580,13 @@ const Classes = () => {
                                     Students: {cls.totalStudents}/{cls.capacity}
                                 </div>
                                 <div className="w-full bg-gray-200 rounded-full h-2">
-                                    <div 
-                                        className="bg-blue-600 h-2 rounded-full" 
+                                    <div
+                                        className="bg-blue-600 h-2 rounded-full"
                                         style={{ width: `${(cls.totalStudents / cls.capacity) * 100}%` }}
                                     ></div>
                                 </div>
                             </div>
-                            
+
                             <div className="mt-4">
                                 <p className="text-sm text-gray-600 mb-2">Subjects:</p>
                                 <div className="flex flex-wrap gap-1">
@@ -580,7 +603,7 @@ const Classes = () => {
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div className="px-6 py-3 bg-gray-50 border-t">
                             <div className="flex items-center justify-between">
                                 <span className="text-sm text-gray-500">ID: {cls.id}</span>
@@ -618,8 +641,8 @@ const Classes = () => {
                     <BookOpen className="mx-auto h-12 w-12 text-gray-400" />
                     <h3 className="mt-2 text-sm font-medium text-gray-900">No classes found</h3>
                     <p className="mt-1 text-sm text-gray-500">
-                        {searchTerm || selectedGrade !== 'all' 
-                            ? 'Try adjusting your search or filter criteria.' 
+                        {searchTerm || selectedGrade !== 'all'
+                            ? 'Try adjusting your search or filter criteria.'
                             : 'Get started by adding a new class.'}
                     </p>
                 </div>

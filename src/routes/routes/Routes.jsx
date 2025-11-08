@@ -14,7 +14,7 @@ import Announcement from '../../pages/Announcement/Announcement';
 import Profile from '../../pages/Profile/Profile';
 import Settings from '../../pages/Settings/Settings';
 import Admin from '../../pages/Admin/Admin';
-import Home from '../../pages/Home.jsx/Home';
+import Home from '../../pages/Home/Home';
 import Logout from '../../pages/Logout/Logout';
 import PrivateRoute from '../privateRoute/PrivateRoute';
 
@@ -102,13 +102,22 @@ const router = createBrowserRouter([
                 path: "announcement",
                 element: <Announcement />,
             },
+            // Admin-only account management
             {
                 path: "profile",
-                element: <Profile />,
+                element: (
+                    <PrivateRoute adminOnly>
+                        <Profile />
+                    </PrivateRoute>
+                ),
             },
             {
                 path: "settings",
-                element: <Settings />
+                element: (
+                    <PrivateRoute adminOnly>
+                        <Settings />
+                    </PrivateRoute>
+                ),
             },
             {
                 path: "logout",

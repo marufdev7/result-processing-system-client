@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { 
-    Search, 
-    Plus, 
-    Edit, 
-    Trash2, 
-    Eye, 
+import {
+    Search,
+    Plus,
+    Edit,
+    Trash2,
+    Eye,
     Filter,
     Download,
     Upload,
@@ -33,91 +33,140 @@ const Assignments = () => {
     const [assignments, setAssignments] = useState([
         {
             id: 'ASG001',
-            title: 'Algebraic Equations Practice',
-            description: 'Solve the given set of linear and quadratic equations. Show all working steps clearly. Submit handwritten solutions.',
-            subject: 'Mathematics',
-            class: 'Class 10A',
-            teacher: 'Dr. Alice Johnson',
-            assignedDate: '2024-02-01',
-            dueDate: '2024-02-15',
+            title: 'Linked Lists Practice and Implementation',
+            description: 'Implement singly and doubly linked lists with insertion, deletion, and traversal operations. Submit source code and a brief report.',
+            subject: 'Data Structures',
+            class: 'CSE',
+            teacher: 'Engr. Farhana Akter',
+            assignedDate: '2024-09-01',
+            dueDate: '2024-09-15',
             totalMarks: 50,
-            instructions: 'Use A4 size paper. Write your name and roll number clearly. Show all calculations.',
-            attachments: ['equations_worksheet.pdf', 'reference_formulas.pdf'],
+            instructions: 'Submit a zipped folder with code and documentation. Mention your student ID clearly.',
+            attachments: ['linked_lists_spec.pdf', 'sample_tests.zip'],
             status: 'Active',
-            submissionType: 'Physical',
-            studentsAssigned: 28,
-            studentsSubmitted: 15,
-            studentsGraded: 10,
-            averageScore: 38
+            submissionType: 'File Upload',
+            studentsAssigned: 42,
+            studentsSubmitted: 29,
+            studentsGraded: 24,
+            averageScore: 36.5
         },
         {
             id: 'ASG002',
-            title: 'Newton\'s Laws Lab Report',
-            description: 'Write a detailed lab report on the experiment demonstrating Newton\'s three laws of motion. Include observations, calculations, and conclusions.',
-            subject: 'Physics',
-            class: 'Class 11A',
-            teacher: 'Prof. Michael Brown',
-            assignedDate: '2024-01-28',
-            dueDate: '2024-02-10',
-            totalMarks: 75,
-            instructions: 'Submit as PDF file through online portal. Maximum 2000 words. Include graphs and diagrams.',
-            attachments: ['lab_report_template.docx', 'experiment_data.xlsx'],
+            title: 'Digital Logic Design Report',
+            description: 'Design a 4-bit binary adder using logic gates. Submit the circuit diagram and simulation screenshots.',
+            subject: 'Digital Electronics',
+            class: 'ECE',
+            teacher: 'Prof. Mahfuz Rahman',
+            assignedDate: '2024-08-20',
+            dueDate: '2024-09-05',
+            totalMarks: 40,
+            instructions: 'Use Proteus or Multisim software for simulation. Attach all screenshots clearly labeled.',
+            attachments: ['logic_adder_template.pdf', 'lab_manual.pdf'],
             status: 'Active',
-            submissionType: 'Online',
-            studentsAssigned: 22,
-            studentsSubmitted: 20,
-            studentsGraded: 18,
-            averageScore: 62
+            submissionType: 'File Upload',
+            studentsAssigned: 38,
+            studentsSubmitted: 30,
+            studentsGraded: 28,
+            averageScore: 33.8
         },
         {
             id: 'ASG003',
-            title: 'Essay on Shakespeare\'s Hamlet',
-            description: 'Write a critical analysis essay on the theme of revenge in Shakespeare\'s Hamlet. Analyze character motivations and plot development.',
-            subject: 'English',
-            class: 'Class 12A',
-            teacher: 'Ms. Sarah Davis',
-            assignedDate: '2024-01-20',
-            dueDate: '2024-02-05',
-            totalMarks: 100,
-            instructions: '1500-2000 words. Use MLA format. Cite at least 3 sources. Submit both hard copy and digital copy.',
-            attachments: ['essay_guidelines.pdf', 'mla_format_guide.pdf'],
-            status: 'Completed',
-            submissionType: 'Both',
-            studentsAssigned: 25,
-            studentsSubmitted: 25,
-            studentsGraded: 25,
-            averageScore: 78
+            title: 'Database Schema Design',
+            description: 'Design a normalized relational database for a university management system including ER diagram and schema.',
+            subject: 'Database Systems',
+            class: 'CSE',
+            teacher: 'Lect. Nazia Rahman',
+            assignedDate: '2024-10-05',
+            dueDate: '2024-10-20',
+            totalMarks: 60,
+            instructions: 'Use MySQL or PostgreSQL. Include ER diagram, create table scripts, and sample queries.',
+            attachments: ['db_assignment_guide.pdf', 'schema_example.sql'],
+            status: 'Active',
+            submissionType: 'File Upload',
+            studentsAssigned: 45,
+            studentsSubmitted: 34,
+            studentsGraded: 30,
+            averageScore: 42.7
         },
         {
             id: 'ASG004',
-            title: 'Chemical Reactions Project',
-            description: 'Create a presentation on different types of chemical reactions with real-world examples. Include chemical equations and practical applications.',
-            subject: 'Chemistry',
-            class: 'Class 11B',
-            teacher: 'Dr. Robert Wilson',
-            assignedDate: '2024-02-08',
-            dueDate: '2024-02-28',
-            totalMarks: 60,
-            instructions: '10-15 slides presentation. Include videos or animations if possible. Present to class on due date.',
-            attachments: ['project_rubric.pdf', 'sample_presentation.pptx'],
-            status: 'Draft',
-            submissionType: 'Online',
-            studentsAssigned: 0,
-            studentsSubmitted: 0,
-            studentsGraded: 0,
-            averageScore: 0
+            title: 'Marketing Strategy Analysis',
+            description: 'Analyze the marketing strategies of a local company. Prepare a report with SWOT analysis and recommendations.',
+            subject: 'Principles of Management',
+            class: 'BBA',
+            teacher: 'Dr. Kamrul Hasan',
+            assignedDate: '2024-07-10',
+            dueDate: '2024-07-25',
+            totalMarks: 50,
+            instructions: 'Report should be 1000–1500 words. Include proper references and company data sources.',
+            attachments: ['marketing_analysis_format.docx'],
+            status: 'Active',
+            submissionType: 'Physical',
+            studentsAssigned: 40,
+            studentsSubmitted: 32,
+            studentsGraded: 27,
+            averageScore: 39.2
+        },
+        {
+            id: 'ASG005',
+            title: 'Electrical Circuit Analysis',
+            description: 'Analyze given AC and DC circuits using Ohm’s and Kirchhoff’s Laws. Submit detailed handwritten solutions.',
+            subject: 'Electrical Circuits',
+            class: 'Diploma',
+            teacher: 'Engr. Saiful Islam',
+            assignedDate: '2024-08-01',
+            dueDate: '2024-08-12',
+            totalMarks: 40,
+            instructions: 'Draw all circuit diagrams neatly. Show calculations step by step. Use A4 sheets.',
+            attachments: ['circuit_exercises.pdf', 'lab_formulas.pdf'],
+            status: 'Active',
+            submissionType: 'Physical',
+            studentsAssigned: 36,
+            studentsSubmitted: 28,
+            studentsGraded: 23,
+            averageScore: 31.5
+        },
+        {
+            id: 'ASG006',
+            title: 'Signal Processing Project Proposal',
+            description: 'Write a short project proposal on real-time signal filtering using MATLAB. Include objectives, tools, and expected outcome.',
+            subject: 'Signal Processing',
+            class: 'ECE',
+            teacher: 'Dr. Rasheda Begum',
+            assignedDate: '2024-09-10',
+            dueDate: '2024-09-25',
+            totalMarks: 45,
+            instructions: 'Submit a PDF document with a cover page and section headings. Group work allowed (max 3 students).',
+            attachments: ['project_guideline.pdf', 'proposal_template.docx'],
+            status: 'Active',
+            submissionType: 'File Upload',
+            studentsAssigned: 33,
+            studentsSubmitted: 26,
+            studentsGraded: 22,
+            averageScore: 37.9
         }
     ]);
 
-    const subjects = ['all', 'Mathematics', 'Physics', 'Chemistry', 'English', 'Biology', 'Computer Science'];
+    const subjects = [
+        'all',
+        'Data Structures',
+        'Digital Electronics',
+        'Database Systems',
+        'Operating Systems',
+        'Financial Accounting',
+        'Signal Processing',
+        'Electrical Circuits',
+        'Principles of Management',
+        'Computer Networks'
+    ];
     const statuses = ['all', 'Draft', 'Active', 'Completed', 'Overdue', 'Cancelled'];
     const submissionTypes = ['Physical', 'Online', 'Both'];
 
     // Filter assignments based on search term, status, and subject
     const filteredAssignments = assignments.filter(assignment => {
         const matchesSearch = assignment.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                            assignment.subject.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                            assignment.class.toLowerCase().includes(searchTerm.toLowerCase());
+            assignment.subject.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            assignment.class.toLowerCase().includes(searchTerm.toLowerCase());
         const matchesStatus = selectedStatus === 'all' || assignment.status === selectedStatus;
         const matchesSubject = selectedSubject === 'all' || assignment.subject === selectedSubject;
         return matchesSearch && matchesStatus && matchesSubject;
@@ -210,7 +259,7 @@ const Assignments = () => {
                 };
                 setAssignments([...assignments, newAssignment]);
             } else if (modalType === 'edit') {
-                setAssignments(assignments.map(assignment => 
+                setAssignments(assignments.map(assignment =>
                     assignment.id === selectedAssignment.id ? { ...assignment, ...formData } : assignment
                 ));
             }
@@ -230,10 +279,10 @@ const Assignments = () => {
                 <div className="bg-white rounded-lg p-6 w-full max-w-4xl max-h-screen overflow-y-auto">
                     <div className="flex justify-between items-center mb-6">
                         <h2 className="text-2xl font-bold text-gray-800">
-                            {modalType === 'add' ? 'Create New Assignment' : 
-                             modalType === 'edit' ? 'Edit Assignment' : 'Assignment Details'}
+                            {modalType === 'add' ? 'Create New Assignment' :
+                                modalType === 'edit' ? 'Edit Assignment' : 'Assignment Details'}
                         </h2>
-                        <button 
+                        <button
                             onClick={() => setShowModal(false)}
                             className="text-gray-500 hover:text-gray-700"
                         >
@@ -266,12 +315,12 @@ const Assignments = () => {
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div>
                                 <h4 className="font-semibold text-gray-800 mb-2">Description</h4>
                                 <p className="text-gray-700 leading-relaxed">{selectedAssignment.description}</p>
                             </div>
-                            
+
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <h4 className="font-semibold text-gray-800 mb-2">Assignment Details</h4>
@@ -283,7 +332,7 @@ const Assignments = () => {
                                         <p><span className="font-medium">Submission Type:</span> {selectedAssignment.submissionType}</p>
                                     </div>
                                 </div>
-                                
+
                                 <div>
                                     <h4 className="font-semibold text-gray-800 mb-2">Progress Statistics</h4>
                                     <div className="space-y-3">
@@ -293,8 +342,8 @@ const Assignments = () => {
                                                 <span>{selectedAssignment.studentsSubmitted}/{selectedAssignment.studentsAssigned}</span>
                                             </div>
                                             <div className="w-full bg-gray-200 rounded-full h-2">
-                                                <div 
-                                                    className="bg-blue-600 h-2 rounded-full" 
+                                                <div
+                                                    className="bg-blue-600 h-2 rounded-full"
                                                     style={{ width: `${getSubmissionProgress(selectedAssignment)}%` }}
                                                 ></div>
                                             </div>
@@ -305,8 +354,8 @@ const Assignments = () => {
                                                 <span>{selectedAssignment.studentsGraded}/{selectedAssignment.studentsSubmitted}</span>
                                             </div>
                                             <div className="w-full bg-gray-200 rounded-full h-2">
-                                                <div 
-                                                    className="bg-green-600 h-2 rounded-full" 
+                                                <div
+                                                    className="bg-green-600 h-2 rounded-full"
                                                     style={{ width: `${getGradingProgress(selectedAssignment)}%` }}
                                                 ></div>
                                             </div>
@@ -317,12 +366,12 @@ const Assignments = () => {
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div>
                                 <h4 className="font-semibold text-gray-800 mb-2">Instructions</h4>
                                 <p className="text-gray-700 bg-gray-50 p-3 rounded">{selectedAssignment.instructions}</p>
                             </div>
-                            
+
                             {selectedAssignment.attachments.length > 0 && (
                                 <div>
                                     <h4 className="font-semibold text-gray-800 mb-2">Attachments</h4>
@@ -537,7 +586,7 @@ const Assignments = () => {
                         <Download className="w-4 h-4 mr-2" />
                         Export
                     </button>
-                    <button 
+                    <button
                         onClick={handleAddAssignment}
                         className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                     >
@@ -648,9 +697,9 @@ const Assignments = () => {
                                     <span className="ml-1">{assignment.status}</span>
                                 </span>
                             </div>
-                            
+
                             <p className="text-gray-600 text-sm mb-4 line-clamp-2">{assignment.description}</p>
-                            
+
                             <div className="space-y-3">
                                 <div className="flex items-center text-sm text-gray-600">
                                     <Calendar className="w-4 h-4 mr-2" />
@@ -660,7 +709,7 @@ const Assignments = () => {
                                     <FileText className="w-4 h-4 mr-2" />
                                     {assignment.totalMarks} marks • {assignment.submissionType}
                                 </div>
-                                
+
                                 {assignment.studentsAssigned > 0 && (
                                     <div>
                                         <div className="flex justify-between text-sm text-gray-600 mb-1">
@@ -668,12 +717,12 @@ const Assignments = () => {
                                             <span>{assignment.studentsSubmitted}/{assignment.studentsAssigned}</span>
                                         </div>
                                         <div className="w-full bg-gray-200 rounded-full h-2">
-                                            <div 
-                                                className="bg-blue-600 h-2 rounded-full" 
+                                            <div
+                                                className="bg-blue-600 h-2 rounded-full"
                                                 style={{ width: `${getSubmissionProgress(assignment)}%` }}
                                             ></div>
                                         </div>
-                                        
+
                                         {assignment.studentsSubmitted > 0 && (
                                             <div className="mt-2">
                                                 <div className="flex justify-between text-sm text-gray-600 mb-1">
@@ -681,8 +730,8 @@ const Assignments = () => {
                                                     <span>{assignment.studentsGraded}/{assignment.studentsSubmitted}</span>
                                                 </div>
                                                 <div className="w-full bg-gray-200 rounded-full h-2">
-                                                    <div 
-                                                        className="bg-green-600 h-2 rounded-full" 
+                                                    <div
+                                                        className="bg-green-600 h-2 rounded-full"
                                                         style={{ width: `${getGradingProgress(assignment)}%` }}
                                                     ></div>
                                                 </div>
@@ -692,7 +741,7 @@ const Assignments = () => {
                                 )}
                             </div>
                         </div>
-                        
+
                         <div className="px-6 py-3 bg-gray-50 border-t">
                             <div className="flex items-center justify-between">
                                 <span className="text-sm text-gray-500">{assignment.teacher}</span>
@@ -731,7 +780,7 @@ const Assignments = () => {
                     <h3 className="mt-2 text-sm font-medium text-gray-900">No assignments found</h3>
                     <p className="mt-1 text-sm text-gray-500">
                         {searchTerm || selectedStatus !== 'all' || selectedSubject !== 'all'
-                            ? 'Try adjusting your search or filter criteria.' 
+                            ? 'Try adjusting your search or filter criteria.'
                             : 'Get started by creating a new assignment.'}
                     </p>
                 </div>

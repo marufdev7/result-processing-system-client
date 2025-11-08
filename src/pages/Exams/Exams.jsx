@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { 
-    Search, 
-    Plus, 
-    Edit, 
-    Trash2, 
-    Eye, 
+import {
+    Search,
+    Plus,
+    Edit,
+    Trash2,
+    Eye,
     Filter,
     Download,
     Upload,
@@ -31,99 +31,194 @@ const Exams = () => {
     const [exams, setExams] = useState([
         {
             id: 'EXM001',
-            title: 'Mid-term Mathematics Exam',
-            subject: 'Mathematics',
-            class: 'Class 10A',
+            title: 'Mid-term Data Structures Exam',
+            subject: 'Data Structures',
+            class: 'CSE',
             examType: 'Mid-term',
-            date: '2024-02-15',
+            date: '2024-10-15',
             startTime: '09:00',
             endTime: '11:00',
-            duration: 120, // minutes
+            duration: 120,
             totalMarks: 100,
             passingMarks: 40,
-            venue: 'Room 101',
-            teacher: 'Dr. Alice Johnson',
-            instructions: 'Bring calculator and geometry box. No mobile phones allowed.',
-            syllabus: ['Algebra', 'Geometry', 'Trigonometry'],
+            venue: 'Lab 201',
+            teacher: 'Engr. Farhana Akter',
+            instructions: 'Bring laptop and notes. No internet allowed.',
+            syllabus: ['Arrays', 'Stacks', 'Queues', 'Linked Lists', 'Trees'],
             status: 'Scheduled',
-            studentsEnrolled: 28,
+            studentsEnrolled: 42,
             studentsAppeared: 0,
-            createdDate: '2024-01-20'
+            createdDate: '2024-09-20'
         },
         {
             id: 'EXM002',
-            title: 'Physics Final Exam',
-            subject: 'Physics',
-            class: 'Class 11A',
+            title: 'Final Operating Systems Exam',
+            subject: 'Operating Systems',
+            class: 'CSE',
             examType: 'Final',
-            date: '2024-02-20',
+            date: '2024-12-05',
             startTime: '10:00',
-            endTime: '13:00',
-            duration: 180,
+            endTime: '12:30',
+            duration: 150,
             totalMarks: 100,
-            passingMarks: 35,
-            venue: 'Physics Lab',
-            teacher: 'Prof. Michael Brown',
-            instructions: 'Practical exam followed by theory. Lab coats mandatory.',
-            syllabus: ['Mechanics', 'Thermodynamics', 'Electricity', 'Magnetism'],
-            status: 'In Progress',
-            studentsEnrolled: 22,
-            studentsAppeared: 22,
-            createdDate: '2024-01-18'
+            passingMarks: 40,
+            venue: 'Lab 201',
+            teacher: 'Engr. Farhana Akter',
+            instructions: 'Bring laptop, write all programs manually. No notes allowed.',
+            syllabus: ['Processes', 'Threads', 'Scheduling', 'Memory Management', 'File Systems'],
+            status: 'Scheduled',
+            studentsEnrolled: 42,
+            studentsAppeared: 0,
+            createdDate: '2024-11-01'
         },
         {
             id: 'EXM003',
-            title: 'Chemistry Unit Test',
-            subject: 'Chemistry',
-            class: 'Class 11B',
-            examType: 'Unit Test',
-            date: '2024-01-25',
-            startTime: '14:00',
-            endTime: '15:30',
-            duration: 90,
-            totalMarks: 50,
-            passingMarks: 20,
-            venue: 'Room 201',
-            teacher: 'Dr. Robert Wilson',
-            instructions: 'Periodic table will be provided. No calculators allowed.',
-            syllabus: ['Atomic Structure', 'Chemical Bonding'],
-            status: 'Completed',
-            studentsEnrolled: 25,
-            studentsAppeared: 24,
-            createdDate: '2024-01-10'
+            title: 'Mid-term Digital Electronics Exam',
+            subject: 'Digital Electronics',
+            class: 'ECE',
+            examType: 'Mid-term',
+            date: '2024-09-25',
+            startTime: '09:00',
+            endTime: '11:00',
+            duration: 120,
+            totalMarks: 100,
+            passingMarks: 40,
+            venue: 'Lab 203',
+            teacher: 'Prof. Mahfuz Rahman',
+            instructions: 'No calculators allowed. Show all logic diagrams clearly.',
+            syllabus: ['Number Systems', 'Logic Gates', 'Flip-Flops', 'Counters'],
+            status: 'Scheduled',
+            studentsEnrolled: 39,
+            studentsAppeared: 0,
+            createdDate: '2024-09-01'
         },
         {
             id: 'EXM004',
-            title: 'English Literature Assessment',
-            subject: 'English',
-            class: 'Class 12A',
-            examType: 'Assignment',
-            date: '2024-03-01',
-            startTime: '11:00',
-            endTime: '13:00',
-            duration: 120,
-            totalMarks: 75,
-            passingMarks: 30,
-            venue: 'Room 301',
-            teacher: 'Ms. Sarah Davis',
-            instructions: 'Essay writing and poetry analysis. Reference books allowed.',
-            syllabus: ['Poetry', 'Drama', 'Essay Writing'],
-            status: 'Draft',
-            studentsEnrolled: 0,
+            title: 'Final Signal Processing Exam',
+            subject: 'Signal Processing',
+            class: 'ECE',
+            examType: 'Final',
+            date: '2024-12-10',
+            startTime: '10:00',
+            endTime: '12:30',
+            duration: 150,
+            totalMarks: 100,
+            passingMarks: 40,
+            venue: 'Lab 203',
+            teacher: 'Dr. Rasheda Begum',
+            instructions: 'Bring MATLAB project files. No mobile phones allowed.',
+            syllabus: ['Fourier Transform', 'Z-Transform', 'Filtering', 'Sampling'],
+            status: 'Scheduled',
+            studentsEnrolled: 39,
             studentsAppeared: 0,
-            createdDate: '2024-02-01'
+            createdDate: '2024-11-05'
+        },
+        {
+            id: 'EXM005',
+            title: 'Mid-term Financial Accounting Exam',
+            subject: 'Financial Accounting',
+            class: 'BBA',
+            examType: 'Mid-term',
+            date: '2024-08-20',
+            startTime: '09:00',
+            endTime: '11:00',
+            duration: 120,
+            totalMarks: 100,
+            passingMarks: 40,
+            venue: 'Room 305',
+            teacher: 'Dr. Kamrul Hasan',
+            instructions: 'Bring calculator. Answer all questions in detail.',
+            syllabus: ['Journal Entries', 'Ledger', 'Trial Balance', 'Income Statement'],
+            status: 'Scheduled',
+            studentsEnrolled: 36,
+            studentsAppeared: 0,
+            createdDate: '2024-08-01'
+        },
+        {
+            id: 'EXM006',
+            title: 'Final Principles of Management Exam',
+            subject: 'Principles of Management',
+            class: 'BBA',
+            examType: 'Final',
+            date: '2024-12-15',
+            startTime: '10:00',
+            endTime: '12:30',
+            duration: 150,
+            totalMarks: 100,
+            passingMarks: 40,
+            venue: 'Room 305',
+            teacher: 'Dr. Kamrul Hasan',
+            instructions: 'Answer case studies and essay questions in detail.',
+            syllabus: ['Planning', 'Organizing', 'Leading', 'Controlling'],
+            status: 'Scheduled',
+            studentsEnrolled: 36,
+            studentsAppeared: 0,
+            createdDate: '2024-11-10'
+        },
+        {
+            id: 'EXM007',
+            title: 'Mid-term Electrical Circuits Exam',
+            subject: 'Electrical Circuits',
+            class: 'Diploma',
+            examType: 'Mid-term',
+            date: '2024-09-15',
+            startTime: '09:00',
+            endTime: '11:00',
+            duration: 120,
+            totalMarks: 100,
+            passingMarks: 40,
+            venue: 'Workshop 101',
+            teacher: 'Engr. Saiful Islam',
+            instructions: 'Bring graph paper and write calculations clearly.',
+            syllabus: ['Ohm’s Law', 'Kirchhoff’s Laws', 'AC/DC Circuits'],
+            status: 'Scheduled',
+            studentsEnrolled: 33,
+            studentsAppeared: 0,
+            createdDate: '2024-09-01'
+        },
+        {
+            id: 'EXM008',
+            title: 'Final Computer Networks Exam',
+            subject: 'Computer Networks',
+            class: 'CSE',
+            examType: 'Final',
+            date: '2024-12-20',
+            startTime: '10:00',
+            endTime: '12:30',
+            duration: 150,
+            totalMarks: 100,
+            passingMarks: 40,
+            venue: 'Lab 201',
+            teacher: 'Lect. Nazia Rahman',
+            instructions: 'Draw network diagrams and explain protocols clearly.',
+            syllabus: ['OSI Model', 'TCP/IP', 'Routing', 'Switching', 'Network Security'],
+            status: 'Scheduled',
+            studentsEnrolled: 42,
+            studentsAppeared: 0,
+            createdDate: '2024-11-15'
         }
     ]);
 
-    const subjects = ['all', 'Mathematics', 'Physics', 'Chemistry', 'English', 'Biology', 'Computer Science'];
-    const examTypes = ['Mid-term', 'Final', 'Unit Test', 'Assignment', 'Project', 'Quiz'];
+    const subjects = [
+        'all',
+        'Data Structures',
+        'Digital Electronics',
+        'Database Systems',
+        'Operating Systems',
+        'Financial Accounting',
+        'Signal Processing',
+        'Electrical Circuits',
+        'Principles of Management',
+        'Computer Networks'
+    ];
+    const examTypes = ['all', 'Assignment', 'Class Test', 'Mid-term', 'Final'];
     const statuses = ['all', 'Draft', 'Scheduled', 'In Progress', 'Completed', 'Cancelled'];
 
     // Filter exams based on search term, status, and subject
     const filteredExams = exams.filter(exam => {
         const matchesSearch = exam.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                            exam.subject.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                            exam.class.toLowerCase().includes(searchTerm.toLowerCase());
+            exam.subject.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            exam.class.toLowerCase().includes(searchTerm.toLowerCase());
         const matchesStatus = selectedStatus === 'all' || exam.status === selectedStatus;
         const matchesSubject = selectedSubject === 'all' || exam.subject === selectedSubject;
         return matchesSearch && matchesStatus && matchesSubject;
@@ -196,7 +291,7 @@ const Exams = () => {
         );
 
         // Calculate duration when start/end time changes
-        const duration = formData.startTime && formData.endTime ? 
+        const duration = formData.startTime && formData.endTime ?
             Math.abs(new Date(`2000-01-01T${formData.endTime}`) - new Date(`2000-01-01T${formData.startTime}`)) / (1000 * 60) : 0;
 
         const handleSubmit = (e) => {
@@ -212,7 +307,7 @@ const Exams = () => {
                 };
                 setExams([...exams, newExam]);
             } else if (modalType === 'edit') {
-                setExams(exams.map(exam => 
+                setExams(exams.map(exam =>
                     exam.id === selectedExam.id ? { ...exam, ...formData, duration } : exam
                 ));
             }
@@ -239,10 +334,10 @@ const Exams = () => {
                 <div className="bg-white rounded-lg p-6 w-full max-w-4xl max-h-screen overflow-y-auto">
                     <div className="flex justify-between items-center mb-6">
                         <h2 className="text-2xl font-bold text-gray-800">
-                            {modalType === 'add' ? 'Schedule New Exam' : 
-                             modalType === 'edit' ? 'Edit Exam' : 'Exam Details'}
+                            {modalType === 'add' ? 'Schedule New Exam' :
+                                modalType === 'edit' ? 'Edit Exam' : 'Exam Details'}
                         </h2>
-                        <button 
+                        <button
                             onClick={() => setShowModal(false)}
                             className="text-gray-500 hover:text-gray-700"
                         >
@@ -261,7 +356,7 @@ const Exams = () => {
                                         <p><span className="font-medium">Class:</span> {selectedExam.class}</p>
                                         <p><span className="font-medium">Type:</span> {selectedExam.examType}</p>
                                         <p><span className="font-medium">Teacher:</span> {selectedExam.teacher}</p>
-                                        <p><span className="font-medium">Status:</span> 
+                                        <p><span className="font-medium">Status:</span>
                                             <span className={`ml-2 px-2 py-1 rounded text-sm inline-flex items-center ${getStatusColor(selectedExam.status)}`}>
                                                 {getStatusIcon(selectedExam.status)}
                                                 <span className="ml-1">{selectedExam.status}</span>
@@ -281,12 +376,12 @@ const Exams = () => {
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div className="bg-gray-50 p-4 rounded-lg">
                                 <h3 className="font-semibold text-gray-800 mb-3">Instructions</h3>
                                 <p className="text-gray-700">{selectedExam.instructions}</p>
                             </div>
-                            
+
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div className="bg-gray-50 p-4 rounded-lg">
                                     <h3 className="font-semibold text-gray-800 mb-3">Syllabus Coverage</h3>
@@ -303,8 +398,8 @@ const Exams = () => {
                                     <div className="space-y-2">
                                         <p><span className="font-medium">Enrolled Students:</span> {selectedExam.studentsEnrolled}</p>
                                         <p><span className="font-medium">Appeared Students:</span> {selectedExam.studentsAppeared}</p>
-                                        <p><span className="font-medium">Attendance Rate:</span> 
-                                            {selectedExam.studentsEnrolled > 0 ? 
+                                        <p><span className="font-medium">Attendance Rate:</span>
+                                            {selectedExam.studentsEnrolled > 0 ?
                                                 Math.round((selectedExam.studentsAppeared / selectedExam.studentsEnrolled) * 100) : 0}%
                                         </p>
                                         <p><span className="font-medium">Created:</span> {selectedExam.createdDate}</p>
@@ -597,7 +692,7 @@ const Exams = () => {
                         <Download className="w-4 h-4 mr-2" />
                         Export Schedule
                     </button>
-                    <button 
+                    <button
                         onClick={handleAddExam}
                         className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                     >
@@ -708,7 +803,7 @@ const Exams = () => {
                                     <span className="ml-1">{exam.status}</span>
                                 </span>
                             </div>
-                            
+
                             <div className="space-y-3">
                                 <div className="flex items-center text-sm text-gray-600">
                                     <Calendar className="w-4 h-4 mr-2" />
@@ -727,7 +822,7 @@ const Exams = () => {
                                     {exam.studentsAppeared}/{exam.studentsEnrolled} appeared
                                 </div>
                             </div>
-                            
+
                             <div className="mt-4">
                                 <p className="text-sm text-gray-600 mb-2">Syllabus:</p>
                                 <div className="flex flex-wrap gap-1">
@@ -744,7 +839,7 @@ const Exams = () => {
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div className="px-6 py-3 bg-gray-50 border-t">
                             <div className="flex items-center justify-between">
                                 <span className="text-sm text-gray-500">{exam.examType}</span>
@@ -783,7 +878,7 @@ const Exams = () => {
                     <h3 className="mt-2 text-sm font-medium text-gray-900">No exams found</h3>
                     <p className="mt-1 text-sm text-gray-500">
                         {searchTerm || selectedStatus !== 'all' || selectedSubject !== 'all'
-                            ? 'Try adjusting your search or filter criteria.' 
+                            ? 'Try adjusting your search or filter criteria.'
                             : 'Get started by scheduling a new exam.'}
                     </p>
                 </div>

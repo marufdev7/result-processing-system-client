@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { 
-    Search, 
-    Plus, 
-    Edit, 
-    Trash2, 
-    Eye, 
+import {
+    Search,
+    Plus,
+    Edit,
+    Trash2,
+    Eye,
     Filter,
     Download,
     Upload,
@@ -35,11 +35,11 @@ const Announcement = () => {
         {
             id: 'ANN001',
             title: 'Mid-term Exam Schedule Released',
-            content: 'The mid-term examination schedule for all classes has been released. Please check the notice board for detailed timings and venues. Students are advised to prepare accordingly.',
+            content: 'The mid-term examination schedule for all departments has been released. Please check the notice board or online portal for detailed timings and venues. Students are advised to prepare accordingly.',
             category: 'Academic',
             priority: 'High',
             targetAudience: 'Students',
-            classes: ['Class 9A', 'Class 9B', 'Class 10A', 'Class 10B'],
+            classes: ['CSE', 'ECE', 'BBA', 'Diploma'],
             author: 'Admin',
             publishedDate: '2024-01-15',
             expiryDate: '2024-02-28',
@@ -50,51 +50,83 @@ const Announcement = () => {
         },
         {
             id: 'ANN002',
-            title: 'New Library Hours Effective Monday',
-            content: 'Starting Monday, February 5th, 2024, the school library will have extended hours. New timings: Monday to Friday 8:00 AM - 6:00 PM, Saturday 9:00 AM - 4:00 PM.',
+            title: 'Holiday Notice for Eid-ul-Fitr',
+            content: 'The university will remain closed on 10th and 11th of April in observance of Eid-ul-Fitr. All classes and labs are suspended during this period.',
             category: 'General',
             priority: 'Medium',
-            targetAudience: 'All',
-            classes: [],
-            author: 'Librarian',
-            publishedDate: '2024-02-01',
-            expiryDate: '2024-03-01',
+            targetAudience: 'All Students and Staff',
+            classes: ['CSE', 'ECE', 'BBA', 'Diploma'],
+            author: 'Admin',
+            publishedDate: '2024-04-05',
+            expiryDate: '2024-04-12',
             status: 'Published',
             isPinned: false,
-            viewCount: 156,
+            viewCount: 180,
             attachments: []
         },
         {
             id: 'ANN003',
-            title: 'Parent-Teacher Meeting Scheduled',
-            content: 'Parent-Teacher meetings for semester review are scheduled for February 20-22, 2024. Please check with your class teachers for specific appointment times.',
-            category: 'Event',
+            title: 'Project Submission Deadline Extended',
+            content: 'The deadline for submission of final semester projects for CSE and ECE students has been extended by one week. Students must submit their projects online before the new deadline.',
+            category: 'Academic',
             priority: 'High',
-            targetAudience: 'Parents',
-            classes: ['Class 10A', 'Class 11A', 'Class 12A'],
-            author: 'Principal',
-            publishedDate: '2024-02-05',
-            expiryDate: '2024-02-25',
+            targetAudience: 'Students',
+            classes: ['CSE', 'ECE'],
+            author: 'Dr. Farhana Akter',
+            publishedDate: '2024-11-10',
+            expiryDate: '2024-12-01',
             status: 'Published',
             isPinned: true,
-            viewCount: 189,
-            attachments: ['PTM_Schedule.pdf']
+            viewCount: 102,
+            attachments: ['Project_Extension_Notice.pdf']
         },
         {
             id: 'ANN004',
-            title: 'Science Fair 2024 Registration Open',
-            content: 'Registration for the Annual Science Fair 2024 is now open. Students can submit their project proposals until February 28th. Exciting prizes await!',
+            title: 'Guest Lecture on Digital Marketing',
+            content: 'A guest lecture on Digital Marketing strategies will be held for BBA students on 20th September. Attendance is compulsory for all students of the BBA department.',
             category: 'Event',
             priority: 'Medium',
-            targetAudience: 'Students',
-            classes: ['Class 9A', 'Class 9B', 'Class 10A', 'Class 10B', 'Class 11A'],
-            author: 'Science Department',
-            publishedDate: '2024-02-08',
-            expiryDate: '2024-03-15',
-            status: 'Draft',
+            targetAudience: 'BBA Students',
+            classes: ['BBA'],
+            author: 'Dr. Kamrul Hasan',
+            publishedDate: '2024-09-10',
+            expiryDate: '2024-09-21',
+            status: 'Published',
             isPinned: false,
-            viewCount: 0,
-            attachments: ['Science_Fair_Guidelines.pdf']
+            viewCount: 85,
+            attachments: ['Guest_Lecture_Details.pdf']
+        },
+        {
+            id: 'ANN005',
+            title: 'Laboratory Maintenance Notice',
+            content: 'The ECE and CSE laboratories will remain closed for maintenance from 15th to 18th July. Students are advised to reschedule their practical sessions accordingly.',
+            category: 'Academic',
+            priority: 'Medium',
+            targetAudience: 'Students',
+            classes: ['CSE', 'ECE'],
+            author: 'Lab Incharge',
+            publishedDate: '2024-07-10',
+            expiryDate: '2024-07-19',
+            status: 'Published',
+            isPinned: false,
+            viewCount: 63,
+            attachments: []
+        },
+        {
+            id: 'ANN006',
+            title: 'Scholarship Application Open',
+            content: 'Applications for the merit-based scholarship for the upcoming semester are now open. Eligible students can apply online through the student portal before 30th November.',
+            category: 'Academic',
+            priority: 'High',
+            targetAudience: 'Students',
+            classes: ['CSE', 'ECE', 'BBA', 'Diploma'],
+            author: 'Admin',
+            publishedDate: '2024-11-01',
+            expiryDate: '2024-11-30',
+            status: 'Published',
+            isPinned: true,
+            viewCount: 220,
+            attachments: ['Scholarship_Application_Form.pdf']
         }
     ]);
 
@@ -106,8 +138,8 @@ const Announcement = () => {
     // Filter announcements based on search term, category, and priority
     const filteredAnnouncements = announcements.filter(announcement => {
         const matchesSearch = announcement.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                            announcement.content.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                            announcement.author.toLowerCase().includes(searchTerm.toLowerCase());
+            announcement.content.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            announcement.author.toLowerCase().includes(searchTerm.toLowerCase());
         const matchesCategory = selectedCategory === 'all' || announcement.category === selectedCategory;
         const matchesPriority = selectedPriority === 'all' || announcement.priority === selectedPriority;
         return matchesSearch && matchesCategory && matchesPriority;
@@ -137,7 +169,7 @@ const Announcement = () => {
         setModalType('view');
         setShowModal(true);
         // Increment view count
-        setAnnouncements(announcements.map(ann => 
+        setAnnouncements(announcements.map(ann =>
             ann.id === announcement.id ? { ...ann, viewCount: ann.viewCount + 1 } : ann
         ));
     };
@@ -149,9 +181,9 @@ const Announcement = () => {
     };
 
     const handleTogglePin = (announcementId) => {
-        setAnnouncements(announcements.map(announcement => 
-            announcement.id === announcementId 
-                ? { ...announcement, isPinned: !announcement.isPinned } 
+        setAnnouncements(announcements.map(announcement =>
+            announcement.id === announcementId
+                ? { ...announcement, isPinned: !announcement.isPinned }
                 : announcement
         ));
     };
@@ -205,9 +237,9 @@ const Announcement = () => {
                 };
                 setAnnouncements([...announcements, newAnnouncement]);
             } else if (modalType === 'edit') {
-                setAnnouncements(announcements.map(announcement => 
-                    announcement.id === selectedAnnouncement.id 
-                        ? { ...announcement, ...formData } 
+                setAnnouncements(announcements.map(announcement =>
+                    announcement.id === selectedAnnouncement.id
+                        ? { ...announcement, ...formData }
                         : announcement
                 ));
             }
@@ -239,10 +271,10 @@ const Announcement = () => {
                 <div className="bg-white rounded-lg p-6 w-full max-w-3xl max-h-screen overflow-y-auto">
                     <div className="flex justify-between items-center mb-6">
                         <h2 className="text-2xl font-bold text-gray-800">
-                            {modalType === 'add' ? 'Create New Announcement' : 
-                             modalType === 'edit' ? 'Edit Announcement' : 'Announcement Details'}
+                            {modalType === 'add' ? 'Create New Announcement' :
+                                modalType === 'edit' ? 'Edit Announcement' : 'Announcement Details'}
                         </h2>
-                        <button 
+                        <button
                             onClick={() => setShowModal(false)}
                             className="text-gray-500 hover:text-gray-700"
                         >
@@ -272,24 +304,23 @@ const Announcement = () => {
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div>
                                 <h4 className="font-semibold text-gray-800 mb-2">Content</h4>
                                 <p className="text-gray-700 leading-relaxed">{selectedAnnouncement.content}</p>
                             </div>
-                            
+
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <h4 className="font-semibold text-gray-800 mb-2">Details</h4>
                                     <div className="space-y-2 text-sm">
                                         <p><span className="font-medium">Author:</span> {selectedAnnouncement.author}</p>
                                         <p><span className="font-medium">Target Audience:</span> {selectedAnnouncement.targetAudience}</p>
-                                        <p><span className="font-medium">Status:</span> 
-                                            <span className={`ml-2 px-2 py-1 rounded text-xs ${
-                                                selectedAnnouncement.status === 'Published' ? 'bg-green-100 text-green-800' :
+                                        <p><span className="font-medium">Status:</span>
+                                            <span className={`ml-2 px-2 py-1 rounded text-xs ${selectedAnnouncement.status === 'Published' ? 'bg-green-100 text-green-800' :
                                                 selectedAnnouncement.status === 'Draft' ? 'bg-gray-100 text-gray-800' :
-                                                'bg-red-100 text-red-800'
-                                            }`}>
+                                                    'bg-red-100 text-red-800'
+                                                }`}>
                                                 {selectedAnnouncement.status}
                                             </span>
                                         </p>
@@ -297,7 +328,7 @@ const Announcement = () => {
                                         <p><span className="font-medium">Views:</span> {selectedAnnouncement.viewCount}</p>
                                     </div>
                                 </div>
-                                
+
                                 {selectedAnnouncement.classes.length > 0 && (
                                     <div>
                                         <h4 className="font-semibold text-gray-800 mb-2">Target Classes</h4>
@@ -311,7 +342,7 @@ const Announcement = () => {
                                     </div>
                                 )}
                             </div>
-                            
+
                             {selectedAnnouncement.attachments.length > 0 && (
                                 <div>
                                     <h4 className="font-semibold text-gray-800 mb-2">Attachments</h4>
@@ -514,7 +545,7 @@ const Announcement = () => {
                         <Download className="w-4 h-4 mr-2" />
                         Export
                     </button>
-                    <button 
+                    <button
                         onClick={handleAddAnnouncement}
                         className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                     >
@@ -628,11 +659,11 @@ const Announcement = () => {
                                             {announcement.priority}
                                         </span>
                                     </div>
-                                    
+
                                     <p className="text-gray-600 text-sm mb-3 line-clamp-2">
                                         {announcement.content}
                                     </p>
-                                    
+
                                     <div className="flex items-center space-x-4 text-sm text-gray-500">
                                         <span className="flex items-center">
                                             {getCategoryIcon(announcement.category)}
@@ -650,15 +681,14 @@ const Announcement = () => {
                                             <Eye className="w-4 h-4 mr-1" />
                                             {announcement.viewCount} views
                                         </span>
-                                        <span className={`px-2 py-1 text-xs rounded ${
-                                            announcement.status === 'Published' ? 'bg-green-100 text-green-800' :
+                                        <span className={`px-2 py-1 text-xs rounded ${announcement.status === 'Published' ? 'bg-green-100 text-green-800' :
                                             announcement.status === 'Draft' ? 'bg-gray-100 text-gray-800' :
-                                            'bg-red-100 text-red-800'
-                                        }`}>
+                                                'bg-red-100 text-red-800'
+                                            }`}>
                                             {announcement.status}
                                         </span>
                                     </div>
-                                    
+
                                     {announcement.classes.length > 0 && (
                                         <div className="mt-3">
                                             <div className="flex flex-wrap gap-1">
@@ -676,13 +706,12 @@ const Announcement = () => {
                                         </div>
                                     )}
                                 </div>
-                                
+
                                 <div className="flex items-center space-x-2 ml-4">
                                     <button
                                         onClick={() => handleTogglePin(announcement.id)}
-                                        className={`p-2 rounded hover:bg-gray-100 ${
-                                            announcement.isPinned ? 'text-orange-500' : 'text-gray-400'
-                                        }`}
+                                        className={`p-2 rounded hover:bg-gray-100 ${announcement.isPinned ? 'text-orange-500' : 'text-gray-400'
+                                            }`}
                                         title={announcement.isPinned ? 'Unpin' : 'Pin'}
                                     >
                                         <Pin className="w-4 h-4" />
@@ -721,7 +750,7 @@ const Announcement = () => {
                     <h3 className="mt-2 text-sm font-medium text-gray-900">No announcements found</h3>
                     <p className="mt-1 text-sm text-gray-500">
                         {searchTerm || selectedCategory !== 'all' || selectedPriority !== 'all'
-                            ? 'Try adjusting your search or filter criteria.' 
+                            ? 'Try adjusting your search or filter criteria.'
                             : 'Get started by creating a new announcement.'}
                     </p>
                 </div>

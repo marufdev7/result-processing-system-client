@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { 
-    Users, 
-    User, 
-    BookOpen, 
-    ClipboardList, 
-    CalendarCheck, 
-    FileText, 
+import {
+    Users,
+    User,
+    BookOpen,
+    ClipboardList,
+    CalendarCheck,
+    FileText,
     BarChart,
     Megaphone,
     Settings,
@@ -70,46 +70,64 @@ const Admin = () => {
         {
             id: 1,
             action: 'New teacher registered',
-            user: 'Dr. Sarah Johnson',
+            user: 'Engr. Farhana Akter',
             timestamp: '5 minutes ago',
             type: 'user',
-            icon: User,
+            icon: 'User',
             color: 'bg-blue-100 text-blue-600'
         },
         {
             id: 2,
-            action: 'Exam results published',
-            user: 'Mathematics Final - Class 10A',
+            action: 'Assignment "Database Systems Practice" created',
+            user: 'Lect. Nazia Rahman',
             timestamp: '15 minutes ago',
-            type: 'exam',
-            icon: CalendarCheck,
+            type: 'assignment',
+            icon: 'FileText',
             color: 'bg-green-100 text-green-600'
         },
         {
             id: 3,
-            action: 'System backup completed',
-            user: 'Automated backup',
-            timestamp: '1 hour ago',
-            type: 'system',
-            icon: Database,
-            color: 'bg-purple-100 text-purple-600'
+            action: 'Mid-term exam scheduled for CSE students',
+            user: 'Engr. Farhana Akter',
+            timestamp: '30 minutes ago',
+            type: 'exam',
+            icon: 'Calendar',
+            color: 'bg-yellow-100 text-yellow-600'
         },
         {
             id: 4,
-            action: 'New announcement created',
-            user: 'Important: New Academic Calendar',
-            timestamp: '2 hours ago',
-            type: 'announcement',
-            icon: Megaphone,
-            color: 'bg-orange-100 text-orange-600'
+            action: 'New student STU21005 enrolled in ECE',
+            user: 'Admin',
+            timestamp: '1 hour ago',
+            type: 'user',
+            icon: 'UserPlus',
+            color: 'bg-purple-100 text-purple-600'
         },
         {
             id: 5,
-            action: 'Student enrollment batch',
-            user: '25 students enrolled in Computer Science',
-            timestamp: '3 hours ago',
-            type: 'enrollment',
-            icon: Users,
+            action: 'Announcement "Project Submission Extended" published',
+            user: 'Dr. Kamrul Hasan',
+            timestamp: '2 hours ago',
+            type: 'announcement',
+            icon: 'Bell',
+            color: 'bg-red-100 text-red-600'
+        },
+        {
+            id: 6,
+            action: 'Grades for Operating Systems mid-term published',
+            user: 'Engr. Farhana Akter',
+            timestamp: '4 hours ago',
+            type: 'grades',
+            icon: 'CheckCircle',
+            color: 'bg-teal-100 text-teal-600'
+        },
+        {
+            id: 7,
+            action: 'Class CSE schedule updated for next semester',
+            user: 'Admin',
+            timestamp: '6 hours ago',
+            type: 'class',
+            icon: 'Clock',
             color: 'bg-indigo-100 text-indigo-600'
         }
     ]);
@@ -153,25 +171,64 @@ const Admin = () => {
             status: 'Active',
             lastLogin: '2024-02-08 14:30',
             avatar: null
+        }, {
+            id: 1,
+            name: 'Engr. Farhana Akter',
+            email: 'farhana.akter@university.edu',
+            role: 'Teacher',
+            department: 'Computer Science and Engineering',
+            status: 'Active',
+            lastLogin: '2025-11-09 09:15',
+            avatar: null
         },
         {
             id: 2,
-            name: 'John Smith',
-            email: 'john.smith@student.school.edu',
-            role: 'Student',
-            class: 'Class 10A',
+            name: 'Prof. Mahfuz Rahman',
+            email: 'mahfuz.rahman@university.edu',
+            role: 'Teacher',
+            department: 'Electrical and Computer Engineering',
             status: 'Active',
-            lastLogin: '2024-02-08 13:45',
+            lastLogin: '2025-11-08 16:45',
             avatar: null
         },
         {
             id: 3,
-            name: 'Prof. Michael Brown',
-            email: 'michael.brown@school.edu',
+            name: 'Dr. Kamrul Hasan',
+            email: 'kamrul.hasan@university.edu',
             role: 'Teacher',
-            department: 'Physics',
-            status: 'Inactive',
-            lastLogin: '2024-02-06 09:15',
+            department: 'Business Administration',
+            status: 'Active',
+            lastLogin: '2025-11-09 08:20',
+            avatar: null
+        },
+        {
+            id: 4,
+            name: 'Engr. Saiful Islam',
+            email: 'saiful.islam@university.edu',
+            role: 'Teacher',
+            department: 'Electrical Technology',
+            status: 'Active',
+            lastLogin: '2025-11-07 14:50',
+            avatar: null
+        },
+        {
+            id: 5,
+            name: 'Lect. Nazia Rahman',
+            email: 'nazia.rahman@university.edu',
+            role: 'Teacher',
+            department: 'Computer Science and Engineering',
+            status: 'Active',
+            lastLogin: '2025-11-09 10:05',
+            avatar: null
+        },
+        {
+            id: 6,
+            name: 'Dr. Rasheda Begum',
+            email: 'rasheda.begum@university.edu',
+            role: 'Teacher',
+            department: 'Electrical and Computer Engineering',
+            status: 'Active',
+            lastLogin: '2025-11-08 17:30',
             avatar: null
         }
     ]);
@@ -407,7 +464,7 @@ const Admin = () => {
                         </div>
                     </div>
                 </div>
-                
+
                 <div className="overflow-x-auto">
                     <table className="min-w-full divide-y divide-gray-200">
                         <thead className="bg-gray-50">
@@ -481,12 +538,11 @@ const Admin = () => {
                                 <p className="text-sm font-medium text-gray-600">{metric.label}</p>
                                 <p className="text-2xl font-bold text-gray-900">{metric.value}</p>
                             </div>
-                            <div className={`p-2 rounded-full ${
-                                metric.color === 'green' ? 'bg-green-100 text-green-600' :
+                            <div className={`p-2 rounded-full ${metric.color === 'green' ? 'bg-green-100 text-green-600' :
                                 metric.color === 'blue' ? 'bg-blue-100 text-blue-600' :
-                                metric.color === 'yellow' ? 'bg-yellow-100 text-yellow-600' :
-                                'bg-red-100 text-red-600'
-                            }`}>
+                                    metric.color === 'yellow' ? 'bg-yellow-100 text-yellow-600' :
+                                        'bg-red-100 text-red-600'
+                                }`}>
                                 <Activity className="w-5 h-5" />
                             </div>
                         </div>
@@ -563,7 +619,7 @@ const Admin = () => {
             <div className="bg-white rounded-lg shadow-md p-6">
                 <div className="flex items-center justify-between">
                     <h2 className="text-lg font-semibold text-gray-900">Analytics Dashboard</h2>
-                    <select 
+                    <select
                         value={selectedTimeRange}
                         onChange={(e) => setSelectedTimeRange(e.target.value)}
                         className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -682,11 +738,10 @@ const Admin = () => {
                                         {dept.passRate}%
                                     </td>
                                     <td className="px-6 py-4 whitespace-nowrap">
-                                        <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
-                                            dept.trend === 'up' ? 'bg-green-100 text-green-800' :
+                                        <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${dept.trend === 'up' ? 'bg-green-100 text-green-800' :
                                             dept.trend === 'down' ? 'bg-red-100 text-red-800' :
-                                            'bg-gray-100 text-gray-800'
-                                        }`}>
+                                                'bg-gray-100 text-gray-800'
+                                            }`}>
                                             {dept.trend === 'up' ? '↗' : dept.trend === 'down' ? '↘' : '→'} {dept.trend}
                                         </span>
                                     </td>
@@ -786,7 +841,7 @@ const Admin = () => {
                                     <input
                                         type="checkbox"
                                         checked={setting.enabled}
-                                        onChange={() => {}}
+                                        onChange={() => { }}
                                         className="sr-only peer"
                                     />
                                     <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
@@ -829,11 +884,10 @@ const Admin = () => {
                         <div key={index} className="px-6 py-4">
                             <div className="flex items-center justify-between">
                                 <div className="flex items-center">
-                                    <div className={`w-3 h-3 rounded-full mr-3 ${
-                                        log.severity === 'error' ? 'bg-red-500' :
+                                    <div className={`w-3 h-3 rounded-full mr-3 ${log.severity === 'error' ? 'bg-red-500' :
                                         log.severity === 'warning' ? 'bg-yellow-500' :
-                                        'bg-blue-500'
-                                    }`}></div>
+                                            'bg-blue-500'
+                                        }`}></div>
                                     <div>
                                         <p className="text-sm font-medium text-gray-900">{log.event}</p>
                                         <p className="text-sm text-gray-500">{log.user} • {log.ip}</p>
@@ -861,21 +915,24 @@ const Admin = () => {
                             <label className="block text-sm font-medium text-gray-700 mb-2">School Name</label>
                             <input
                                 type="text"
-                                defaultValue="ABC International School"
+                                defaultValue="Institute of Science and Technology"
                                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                             />
                         </div>
                         <div>
                             <label className="block text-sm font-medium text-gray-700 mb-2">Academic Year</label>
                             <select className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                <option>2020-2021</option>
+                                <option>2021-2022</option>
+                                <option>2022-2023</option>
                                 <option>2023-2024</option>
                                 <option>2024-2025</option>
+                                <option>2025-2026</option>
                             </select>
                         </div>
                         <div>
                             <label className="block text-sm font-medium text-gray-700 mb-2">Time Zone</label>
                             <select className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                                <option>UTC-5 (Eastern Time)</option>
                                 <option>UTC-6 (Central Time)</option>
                                 <option>UTC-7 (Mountain Time)</option>
                                 <option>UTC-8 (Pacific Time)</option>
@@ -928,7 +985,7 @@ const Admin = () => {
                             <label className="block text-sm font-medium text-gray-700 mb-2">From Name</label>
                             <input
                                 type="text"
-                                defaultValue="ABC International School"
+                                defaultValue="Institute of Science and Technology"
                                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                             />
                         </div>
@@ -1017,11 +1074,10 @@ const Admin = () => {
                                     <li key={tab.id}>
                                         <button
                                             onClick={() => setActiveTab(tab.id)}
-                                            className={`w-full flex items-center px-3 py-2 text-left rounded-lg transition-colors ${
-                                                activeTab === tab.id
-                                                    ? 'bg-blue-100 text-blue-700 border-r-2 border-blue-500'
-                                                    : 'text-gray-600 hover:bg-gray-100'
-                                            }`}
+                                            className={`w-full flex items-center px-3 py-2 text-left rounded-lg transition-colors ${activeTab === tab.id
+                                                ? 'bg-blue-100 text-blue-700 border-r-2 border-blue-500'
+                                                : 'text-gray-600 hover:bg-gray-100'
+                                                }`}
                                         >
                                             <Icon className="w-5 h-5 mr-3" />
                                             {tab.label}

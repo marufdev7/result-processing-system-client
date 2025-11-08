@@ -45,11 +45,18 @@ const Sidebar = () => {
         { label: 'System Admin', icon: <Shield color="#83bfd2" className="w-4 h-4" />, to: '/admin' },
     ];
 
-    const otherItems = [
+    // Admin gets Profile and Settings, Students only get Logout
+    const adminAccountItems = [
         { label: 'Profile', icon: <User color="#83bfd2" className="w-4 h-4" />, to: '/profile' },
         { label: 'Settings', icon: <Settings color="#83bfd2" className="w-4 h-4" />, to: '/settings' },
         { label: 'Logout', icon: <LogOut color="#83bfd2" className="w-4 h-4" />, to: '/logout' },
     ];
+
+    const studentAccountItems = [
+        { label: 'Logout', icon: <LogOut color="#83bfd2" className="w-4 h-4" />, to: '/logout' },
+    ];
+
+    const accountItems = isAdmin() ? adminAccountItems : studentAccountItems;
 
     // Choose menu items based on user role
     const menuItems = isAdmin() ? adminMenuItems : studentMenuItems;
@@ -99,7 +106,7 @@ const Sidebar = () => {
 
             <div className="text-xs font-semibold text-gray-500 uppercase mb-2">Account</div>
             <nav className="space-y-1">
-                {otherItems.map((item) => (
+                {accountItems.map((item) => (
                     <Link key={item.to} to={item.to} className={linkClass(item.to)}>
                         {item.icon}
                         {item.label}

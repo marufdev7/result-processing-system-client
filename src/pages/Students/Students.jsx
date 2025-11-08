@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { 
-    Search, 
-    Plus, 
-    Edit, 
-    Trash2, 
-    Eye, 
+import {
+    Search,
+    Plus,
+    Edit,
+    Trash2,
+    Eye,
     Filter,
     Download,
     Upload,
@@ -26,70 +26,154 @@ const Students = () => {
     // Sample student data
     const [students, setStudents] = useState([
         {
-            id: 'STU001',
-            name: 'John Smith',
-            email: 'john.smith@email.com',
-            phone: '+1-555-0123',
-            class: 'Class 10A',
-            dateOfBirth: '2008-05-15',
-            address: '123 Main St, City',
-            guardianName: 'Robert Smith',
-            guardianPhone: '+1-555-0124',
+            id: '21001',
+            name: 'Md. Rakib Hasan',
+            email: 'rakib.hasan@email.com',
+            phone: '+88-01712345678',
+            class: 'CSE',
+            dateOfBirth: '2001-04-22',
+            address: 'Mirpur, Dhaka',
+            guardianName: 'Abdul Karim',
+            guardianPhone: '+88-01987654321',
             status: 'Active',
-            enrollmentDate: '2023-09-01',
-            gpa: '3.8'
+            enrollmentDate: '2021-01-10',
+            gpa: '3.85'
         },
         {
-            id: 'STU002',
-            name: 'Emma Johnson',
-            email: 'emma.johnson@email.com',
-            phone: '+1-555-0125',
-            class: 'Class 10B',
-            dateOfBirth: '2008-03-22',
-            address: '456 Oak Ave, City',
-            guardianName: 'Sarah Johnson',
-            guardianPhone: '+1-555-0126',
+            id: '21002',
+            name: 'Nusrat Jahan',
+            email: 'nusrat.jahan@email.com',
+            phone: '+88-01624567890',
+            class: 'ECE',
+            dateOfBirth: '2000-11-12',
+            address: 'Uttara, Dhaka',
+            guardianName: 'Fazlul Haque',
+            guardianPhone: '+88-01836547890',
             status: 'Active',
-            enrollmentDate: '2023-09-01',
-            gpa: '3.9'
+            enrollmentDate: '2020-09-01',
+            gpa: '3.72'
         },
         {
-            id: 'STU003',
-            name: 'Michael Brown',
-            email: 'michael.brown@email.com',
-            phone: '+1-555-0127',
-            class: 'Class 9A',
-            dateOfBirth: '2009-07-10',
-            address: '789 Pine Rd, City',
-            guardianName: 'David Brown',
-            guardianPhone: '+1-555-0128',
+            id: '21003',
+            name: 'Sajid Ahmed',
+            email: 'sajid.ahmed@email.com',
+            phone: '+88-01512457896',
+            class: 'BBA',
+            dateOfBirth: '1999-07-09',
+            address: 'Dhanmondi, Dhaka',
+            guardianName: 'Nazrul Islam',
+            guardianPhone: '+88-01756987412',
             status: 'Active',
-            enrollmentDate: '2023-09-01',
-            gpa: '3.6'
+            enrollmentDate: '2019-09-01',
+            gpa: '3.65'
         },
         {
-            id: 'STU004',
-            name: 'Sarah Davis',
-            email: 'sarah.davis@email.com',
-            phone: '+1-555-0129',
-            class: 'Class 11A',
-            dateOfBirth: '2007-11-18',
-            address: '321 Elm St, City',
-            guardianName: 'Lisa Davis',
-            guardianPhone: '+1-555-0130',
-            status: 'Inactive',
-            enrollmentDate: '2022-09-01',
-            gpa: '3.7'
+            id: '21004',
+            name: 'Tania Akter',
+            email: 'tania.akter@email.com',
+            phone: '+88-01836987451',
+            class: 'Diploma',
+            dateOfBirth: '2002-02-18',
+            address: 'Mohammadpur, Dhaka',
+            guardianName: 'Rafiqul Islam',
+            guardianPhone: '+88-01945236987',
+            status: 'Active',
+            enrollmentDate: '2021-06-15',
+            gpa: '3.90'
+        },
+        {
+            id: '21005',
+            name: 'Ariful Islam',
+            email: 'ariful.islam@email.com',
+            phone: '+88-01798562314',
+            class: 'CSE',
+            dateOfBirth: '2001-09-25',
+            address: 'Khilgaon, Dhaka',
+            guardianName: 'Jalal Uddin',
+            guardianPhone: '+88-01845236598',
+            status: 'Active',
+            enrollmentDate: '2020-09-01',
+            gpa: '3.78'
+        },
+        {
+            id: '21006',
+            name: 'Mitu Rahman',
+            email: 'mitu.rahman@email.com',
+            phone: '+88-01687965412',
+            class: 'ECE',
+            dateOfBirth: '2003-03-14',
+            address: 'Banani, Dhaka',
+            guardianName: 'Shafiqul Alam',
+            guardianPhone: '+88-01978451236',
+            status: 'Active',
+            enrollmentDate: '2022-01-05',
+            gpa: '3.67'
+        },
+        {
+            id: '21007',
+            name: 'Hasan Mahmud',
+            email: 'hasan.mahmud@email.com',
+            phone: '+88-01732145698',
+            class: 'Diploma',
+            dateOfBirth: '2000-12-30',
+            address: 'Bashundhara, Dhaka',
+            guardianName: 'Kamal Uddin',
+            guardianPhone: '+88-01896587412',
+            status: 'Active',
+            enrollmentDate: '2020-02-20',
+            gpa: '3.80'
+        },
+        {
+            id: '21008',
+            name: 'Sadia Khatun',
+            email: 'sadia.khatun@email.com',
+            phone: '+88-01574589632',
+            class: 'BBA',
+            dateOfBirth: '2002-06-07',
+            address: 'Tejgaon, Dhaka',
+            guardianName: 'Abdur Rahim',
+            guardianPhone: '+88-01745269831',
+            status: 'Active',
+            enrollmentDate: '2021-09-01',
+            gpa: '3.74'
+        },
+        {
+            id: '21009',
+            name: 'Rafiul Alam',
+            email: 'rafiul.alam@email.com',
+            phone: '+88-01874561239',
+            class: 'CSE',
+            dateOfBirth: '1999-08-11',
+            address: 'Malibagh, Dhaka',
+            guardianName: 'Azizur Rahman',
+            guardianPhone: '+88-01987456321',
+            status: 'Active',
+            enrollmentDate: '2019-09-01',
+            gpa: '3.91'
+        },
+        {
+            id: '21010',
+            name: 'Sumaiya Rahman',
+            email: 'sumaiya.rahman@email.com',
+            phone: '+88-01798765432',
+            class: 'ECE',
+            dateOfBirth: '2001-05-03',
+            address: 'Rampura, Dhaka',
+            guardianName: 'Anwar Hossain',
+            guardianPhone: '+88-01856478932',
+            status: 'Active',
+            enrollmentDate: '2020-11-15',
+            gpa: '3.82'
         }
     ]);
 
-    const classes = ['all', 'Class 9A', 'Class 9B', 'Class 10A', 'Class 10B', 'Class 11A', 'Class 11B'];
+    const classes = ['all', 'CSE', 'ECE', 'BBA', 'Diploma'];
 
     // Filter students based on search term and selected class
     const filteredStudents = students.filter(student => {
         const matchesSearch = student.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                            student.id.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                            student.email.toLowerCase().includes(searchTerm.toLowerCase());
+            student.id.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            student.email.toLowerCase().includes(searchTerm.toLowerCase());
         const matchesClass = selectedClass === 'all' || student.class === selectedClass;
         return matchesSearch && matchesClass;
     });
@@ -144,7 +228,7 @@ const Students = () => {
                 };
                 setStudents([...students, newStudent]);
             } else if (modalType === 'edit') {
-                setStudents(students.map(student => 
+                setStudents(students.map(student =>
                     student.id === selectedStudent.id ? { ...student, ...formData } : student
                 ));
             }
@@ -163,10 +247,10 @@ const Students = () => {
                 <div className="bg-white rounded-lg p-6 w-full max-w-2xl max-h-screen overflow-y-auto">
                     <div className="flex justify-between items-center mb-6">
                         <h2 className="text-2xl font-bold text-gray-800">
-                            {modalType === 'add' ? 'Add New Student' : 
-                             modalType === 'edit' ? 'Edit Student' : 'Student Details'}
+                            {modalType === 'add' ? 'Add New Student' :
+                                modalType === 'edit' ? 'Edit Student' : 'Student Details'}
                         </h2>
-                        <button 
+                        <button
                             onClick={() => setShowModal(false)}
                             className="text-gray-500 hover:text-gray-700"
                         >
@@ -357,7 +441,7 @@ const Students = () => {
                         <Upload className="w-4 h-4 mr-2" />
                         Import
                     </button>
-                    <button 
+                    <button
                         onClick={handleAddStudent}
                         className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                     >
@@ -503,20 +587,18 @@ const Students = () => {
                                         <div className="text-sm text-gray-500">Enrolled: {student.enrollmentDate}</div>
                                     </td>
                                     <td className="px-6 py-4 whitespace-nowrap">
-                                        <span className={`inline-flex px-2 py-1 text-sm font-medium rounded-full ${
-                                            parseFloat(student.gpa) >= 3.5 ? 'bg-green-100 text-green-800' :
+                                        <span className={`inline-flex px-2 py-1 text-sm font-medium rounded-full ${parseFloat(student.gpa) >= 3.5 ? 'bg-green-100 text-green-800' :
                                             parseFloat(student.gpa) >= 3.0 ? 'bg-yellow-100 text-yellow-800' :
-                                            'bg-red-100 text-red-800'
-                                        }`}>
+                                                'bg-red-100 text-red-800'
+                                            }`}>
                                             {student.gpa}
                                         </span>
                                     </td>
                                     <td className="px-6 py-4 whitespace-nowrap">
-                                        <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${
-                                            student.status === 'Active' 
-                                                ? 'bg-green-100 text-green-800' 
-                                                : 'bg-red-100 text-red-800'
-                                        }`}>
+                                        <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${student.status === 'Active'
+                                            ? 'bg-green-100 text-green-800'
+                                            : 'bg-red-100 text-red-800'
+                                            }`}>
                                             {student.status}
                                         </span>
                                     </td>
@@ -556,8 +638,8 @@ const Students = () => {
                         <Users className="mx-auto h-12 w-12 text-gray-400" />
                         <h3 className="mt-2 text-sm font-medium text-gray-900">No students found</h3>
                         <p className="mt-1 text-sm text-gray-500">
-                            {searchTerm || selectedClass !== 'all' 
-                                ? 'Try adjusting your search or filter criteria.' 
+                            {searchTerm || selectedClass !== 'all'
+                                ? 'Try adjusting your search or filter criteria.'
                                 : 'Get started by adding a new student.'}
                         </p>
                     </div>

@@ -19,9 +19,9 @@ const Login = () => {
     };
 
     const STUDENT_CREDENTIALS = [
-        { id: '2021001', password: 'student123', name: 'John Doe', class: 'CSE-A' },
-        { id: '2021002', password: 'student123', name: 'Jane Smith', class: 'CSE-B' },
-        { id: '2021003', password: 'student123', name: 'Alice Johnson', class: 'EEE-A' }
+        { id: '21001', password: 'student123', name: 'Md. Rakib Hasan', class: 'CSE' },
+        { id: '21002', password: 'student123', name: 'Nusrat Jahan', class: 'ECE' },
+        { id: '21003', password: 'student123', name: 'Sajid Ahmed', class: 'BBA' }
     ];
 
     const handleAdminLogin = (e) => {
@@ -195,7 +195,7 @@ const Login = () => {
                         <div className="mt-4 p-3 bg-green-50 rounded-lg">
                             <p className="text-xs text-green-700">
                                 <strong>Demo Student IDs:</strong><br />
-                                2021001, 2021002, 2021003<br />
+                                21001, 21002, 21003<br />
                                 Password: student123
                             </p>
                         </div>

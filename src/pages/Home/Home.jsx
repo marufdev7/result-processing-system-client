@@ -1,12 +1,12 @@
 import React from 'react';
 import { useAuth } from '../../providers/AuthProvider';
 import { useNavigate } from 'react-router-dom';
-import { 
-    Users, 
-    BookOpen, 
-    BarChart, 
-    Calendar, 
-    Trophy, 
+import {
+    Users,
+    BookOpen,
+    BarChart,
+    Calendar,
+    Trophy,
     Bell,
     TrendingUp,
     GraduationCap,
@@ -38,35 +38,66 @@ const Home = () => {
     const recentActivities = [
         {
             id: 1,
-            action: 'New student enrollment',
-            user: 'John Smith - Grade 10',
+            action: 'New teacher registered',
+            user: 'Engr. Farhana Akter',
             timestamp: '5 minutes ago',
-            icon: Users,
-            color: 'text-blue-600 bg-blue-100'
+            type: 'user',
+            icon: 'User',
+            color: 'bg-blue-100 text-blue-600'
         },
         {
             id: 2,
-            action: 'Exam results published',
-            user: 'Mathematics Final - Class 11A',
-            timestamp: '1 hour ago',
-            icon: CalendarCheck,
-            color: 'text-green-600 bg-green-100'
+            action: 'Assignment "Database Systems Practice" created',
+            user: 'Lect. Nazia Rahman',
+            timestamp: '15 minutes ago',
+            type: 'assignment',
+            icon: 'FileText',
+            color: 'bg-green-100 text-green-600'
         },
         {
             id: 3,
-            action: 'New announcement created',
-            user: 'Parent-Teacher Meeting Schedule',
-            timestamp: '2 hours ago',
-            icon: Megaphone,
-            color: 'text-orange-600 bg-orange-100'
+            action: 'Mid-term exam scheduled for CSE students',
+            user: 'Engr. Farhana Akter',
+            timestamp: '30 minutes ago',
+            type: 'exam',
+            icon: 'Calendar',
+            color: 'bg-yellow-100 text-yellow-600'
         },
         {
             id: 4,
-            action: 'Teacher assignment updated',
-            user: 'Dr. Sarah Wilson - Physics Dept',
-            timestamp: '3 hours ago',
-            icon: BookOpen,
-            color: 'text-purple-600 bg-purple-100'
+            action: 'New student STU21005 enrolled in ECE',
+            user: 'Admin',
+            timestamp: '1 hour ago',
+            type: 'user',
+            icon: 'UserPlus',
+            color: 'bg-purple-100 text-purple-600'
+        },
+        {
+            id: 5,
+            action: 'Announcement "Project Submission Extended" published',
+            user: 'Dr. Kamrul Hasan',
+            timestamp: '2 hours ago',
+            type: 'announcement',
+            icon: 'Bell',
+            color: 'bg-red-100 text-red-600'
+        },
+        {
+            id: 6,
+            action: 'Grades for Operating Systems mid-term published',
+            user: 'Engr. Farhana Akter',
+            timestamp: '4 hours ago',
+            type: 'grades',
+            icon: 'CheckCircle',
+            color: 'bg-teal-100 text-teal-600'
+        },
+        {
+            id: 7,
+            action: 'Class CSE schedule updated for next semester',
+            user: 'Admin',
+            timestamp: '6 hours ago',
+            type: 'class',
+            icon: 'Clock',
+            color: 'bg-indigo-100 text-indigo-600'
         }
     ];
 
@@ -128,9 +159,14 @@ const Home = () => {
         completedExams: 4,
         pendingAssignments: 2,
         recentResults: [
-            { subject: 'Mathematics', grade: 'A-', score: 88 },
-            { subject: 'Physics', grade: 'B+', score: 82 },
-            { subject: 'Chemistry', grade: 'A', score: 91 },
+            { subject: 'Data Structures', grade: 'A', score: 92 },
+            { subject: 'Operating Systems', grade: 'A-', score: 88 },
+            { subject: 'Database Systems', grade: 'B+', score: 84 },
+            { subject: 'Computer Networks', grade: 'A-', score: 89 },
+            { subject: 'Digital Electronics', grade: 'B+', score: 83 },
+            { subject: 'Signal Processing', grade: 'A-', score: 87 },
+            { subject: 'Electrical Circuits', grade: 'A', score: 91 },
+            { subject: 'Principles of Management', grade: 'B+', score: 85 }
         ],
         announcements: [
             { title: 'Mid-term Exam Schedule Released', date: '2024-01-15', type: 'exam' },
@@ -211,7 +247,7 @@ const Home = () => {
             <div className="bg-white p-6 rounded-lg shadow-md">
                 <h2 className="text-xl font-semibold text-gray-800 mb-4">Quick Actions</h2>
                 <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                    <button 
+                    <button
                         onClick={() => handleQuickAction('students')}
                         className="p-4 text-left hover:bg-blue-50 rounded-lg border border-gray-200 transition-colors hover:border-blue-300"
                     >
@@ -219,7 +255,7 @@ const Home = () => {
                         <span className="block font-medium text-gray-800">Students</span>
                         <span className="text-sm text-gray-500">Manage students</span>
                     </button>
-                    <button 
+                    <button
                         onClick={() => handleQuickAction('teachers')}
                         className="p-4 text-left hover:bg-green-50 rounded-lg border border-gray-200 transition-colors hover:border-green-300"
                     >
@@ -227,7 +263,7 @@ const Home = () => {
                         <span className="block font-medium text-gray-800">Teachers</span>
                         <span className="text-sm text-gray-500">Manage teachers</span>
                     </button>
-                    <button 
+                    <button
                         onClick={() => handleQuickAction('exams')}
                         className="p-4 text-left hover:bg-purple-50 rounded-lg border border-gray-200 transition-colors hover:border-purple-300"
                     >
@@ -235,7 +271,7 @@ const Home = () => {
                         <span className="block font-medium text-gray-800">Exams</span>
                         <span className="text-sm text-gray-500">Schedule exams</span>
                     </button>
-                    <button 
+                    <button
                         onClick={() => handleQuickAction('results')}
                         className="p-4 text-left hover:bg-orange-50 rounded-lg border border-gray-200 transition-colors hover:border-orange-300"
                     >
@@ -243,7 +279,7 @@ const Home = () => {
                         <span className="block font-medium text-gray-800">Results</span>
                         <span className="text-sm text-gray-500">View results</span>
                     </button>
-                    <button 
+                    <button
                         onClick={() => handleQuickAction('assignments')}
                         className="p-4 text-left hover:bg-indigo-50 rounded-lg border border-gray-200 transition-colors hover:border-indigo-300"
                     >
@@ -251,7 +287,7 @@ const Home = () => {
                         <span className="block font-medium text-gray-800">Assignments</span>
                         <span className="text-sm text-gray-500">Manage tasks</span>
                     </button>
-                    <button 
+                    <button
                         onClick={() => handleQuickAction('announcements')}
                         className="p-4 text-left hover:bg-pink-50 rounded-lg border border-gray-200 transition-colors hover:border-pink-300"
                     >
@@ -298,9 +334,9 @@ const Home = () => {
                     <div className="space-y-4">
                         {systemAlerts.map((alert) => {
                             const Icon = alert.icon;
-                            const alertColor = alert.level === 'warning' ? 'text-yellow-600 bg-yellow-100' : 
-                                             alert.level === 'error' ? 'text-red-600 bg-red-100' : 
-                                             'text-green-600 bg-green-100';
+                            const alertColor = alert.level === 'warning' ? 'text-yellow-600 bg-yellow-100' :
+                                alert.level === 'error' ? 'text-red-600 bg-red-100' :
+                                    'text-green-600 bg-green-100';
                             return (
                                 <div key={alert.id} className="flex items-start justify-between p-3 rounded-lg border border-gray-200">
                                     <div className="flex items-start space-x-3">
@@ -404,11 +440,10 @@ const Home = () => {
                                     <p className="font-medium text-gray-800">{result.subject}</p>
                                     <p className="text-sm text-gray-500">Score: {result.score}%</p>
                                 </div>
-                                <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                                    result.grade.startsWith('A') ? 'bg-green-100 text-green-800' :
+                                <span className={`px-3 py-1 rounded-full text-sm font-medium ${result.grade.startsWith('A') ? 'bg-green-100 text-green-800' :
                                     result.grade.startsWith('B') ? 'bg-blue-100 text-blue-800' :
-                                    'bg-yellow-100 text-yellow-800'
-                                }`}>
+                                        'bg-yellow-100 text-yellow-800'
+                                    }`}>
                                     {result.grade}
                                 </span>
                             </div>
@@ -427,11 +462,10 @@ const Home = () => {
                                         <p className="font-medium text-gray-800">{announcement.title}</p>
                                         <p className="text-sm text-gray-500 mt-1">{announcement.date}</p>
                                     </div>
-                                    <span className={`px-2 py-1 text-xs rounded-full ${
-                                        announcement.type === 'exam' ? 'bg-red-100 text-red-800' :
+                                    <span className={`px-2 py-1 text-xs rounded-full ${announcement.type === 'exam' ? 'bg-red-100 text-red-800' :
                                         announcement.type === 'assignment' ? 'bg-blue-100 text-blue-800' :
-                                        'bg-gray-100 text-gray-800'
-                                    }`}>
+                                            'bg-gray-100 text-gray-800'
+                                        }`}>
                                         {announcement.type}
                                     </span>
                                 </div>
