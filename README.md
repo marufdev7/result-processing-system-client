@@ -178,3 +178,27 @@ const calculatedGPA = filteredResults.length > 0 && totalCredits > 0 ?
 - Comparison with class average
 - Grade trend analysis
 - Progress tracking towards graduation requirements
+
+
+## For Student Login
+Student Portal
+├── Dashboard
+├── My Results
+├── Announcements
+└── Logout (Account section)
+
+## For Admin Login
+Administrator
+├── Dashboard
+├── Teachers
+├── Students
+├── Subjects
+├── Classes
+├── Exams
+├── Assignments
+├── Results
+├── Announcements
+├── System Admin
+├── Profile
+├── Settings
+└── Logout
