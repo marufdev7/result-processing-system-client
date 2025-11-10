@@ -21,8 +21,10 @@ import {
     BookOpen,
     GraduationCap
 } from 'lucide-react';
+import { useAuth } from '../../providers/AuthProvider';
 
 const Announcement = () => {
+    const { isAdmin } = useAuth();
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedPriority, setSelectedPriority] = useState('all');
@@ -538,21 +540,25 @@ const Announcement = () => {
             <div className="flex items-center justify-between mb-6">
                 <div>
                     <h1 className="text-3xl font-bold text-gray-800">Announcements</h1>
-                    <p className="text-gray-600 mt-2">Manage school announcements and notices</p>
+                    <p className="text-gray-600 mt-2">
+                        {isAdmin() ? 'Manage school announcements and notices' : 'View important announcements and notices'}
+                    </p>
                 </div>
-                <div className="flex items-center space-x-3">
-                    <button className="flex items-center px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
-                        <Download className="w-4 h-4 mr-2" />
-                        Export
-                    </button>
-                    <button
-                        onClick={handleAddAnnouncement}
-                        className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-                    >
-                        <Plus className="w-4 h-4 mr-2" />
-                        New Announcement
-                    </button>
-                </div>
+                {isAdmin() && (
+                    <div className="flex items-center space-x-3">
+                        <button className="flex items-center px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
+                            <Download className="w-4 h-4 mr-2" />
+                            Export
+                        </button>
+                        <button
+                            onClick={handleAddAnnouncement}
+                            className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                        >
+                            <Plus className="w-4 h-4 mr-2" />
+                            New Announcement
+                        </button>
+                    </div>
+                )}
             </div>
 
             {/* Stats Cards */}
@@ -708,14 +714,18 @@ const Announcement = () => {
                                 </div>
 
                                 <div className="flex items-center space-x-2 ml-4">
-                                    <button
-                                        onClick={() => handleTogglePin(announcement.id)}
-                                        className={`p-2 rounded hover:bg-gray-100 ${announcement.isPinned ? 'text-orange-500' : 'text-gray-400'
-                                            }`}
-                                        title={announcement.isPinned ? 'Unpin' : 'Pin'}
-                                    >
-                                        <Pin className="w-4 h-4" />
-                                    </button>
+                                    {isAdmin() && (
+                                        <>
+                                            <button
+                                                onClick={() => handleTogglePin(announcement.id)}
+                                                className={`p-2 rounded hover:bg-gray-100 ${announcement.isPinned ? 'text-orange-500' : 'text-gray-400'
+                                                    }`}
+                                                title={announcement.isPinned ? 'Unpin' : 'Pin'}
+                                            >
+                                                <Pin className="w-4 h-4" />
+                                            </button>
+                                        </>
+                                    )}
                                     <button
                                         onClick={() => handleViewAnnouncement(announcement)}
                                         className="text-blue-600 hover:text-blue-900 p-2 rounded hover:bg-blue-50"
@@ -723,20 +733,24 @@ const Announcement = () => {
                                     >
                                         <Eye className="w-4 h-4" />
                                     </button>
-                                    <button
-                                        onClick={() => handleEditAnnouncement(announcement)}
-                                        className="text-green-600 hover:text-green-900 p-2 rounded hover:bg-green-50"
-                                        title="Edit Announcement"
-                                    >
-                                        <Edit className="w-4 h-4" />
-                                    </button>
-                                    <button
-                                        onClick={() => handleDeleteAnnouncement(announcement.id)}
-                                        className="text-red-600 hover:text-red-900 p-2 rounded hover:bg-red-50"
-                                        title="Delete Announcement"
-                                    >
-                                        <Trash2 className="w-4 h-4" />
-                                    </button>
+                                    {isAdmin() && (
+                                        <>
+                                            <button
+                                                onClick={() => handleEditAnnouncement(announcement)}
+                                                className="text-green-600 hover:text-green-900 p-2 rounded hover:bg-green-50"
+                                                title="Edit Announcement"
+                                            >
+                                                <Edit className="w-4 h-4" />
+                                            </button>
+                                            <button
+                                                onClick={() => handleDeleteAnnouncement(announcement.id)}
+                                                className="text-red-600 hover:text-red-900 p-2 rounded hover:bg-red-50"
+                                                title="Delete Announcement"
+                                            >
+                                                <Trash2 className="w-4 h-4" />
+                                            </button>
+                                        </>
+                                    )}
                                 </div>
                             </div>
                         </div>
