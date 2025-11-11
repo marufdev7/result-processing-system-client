@@ -27,8 +27,8 @@ const Students = () => {
     const [students, setStudents] = useState([
         {
             id: '21001',
-            name: 'Md. Rakib Hasan',
-            email: 'rakib.hasan@email.com',
+            name: 'Md. Sobuj Ahmed',
+            email: 'sobuj.ahmed@email.com',
             phone: '+88-01712345678',
             class: 'CSE',
             dateOfBirth: '2001-04-22',
