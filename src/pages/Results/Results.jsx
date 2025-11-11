@@ -35,7 +35,7 @@ const Results = () => {
         {
             id: 'RES001',
             studentId: '21001',
-            studentName: 'Md. Rakib Hasan',
+            studentName: 'Md. Sobuj Ahmed',
             class: 'CSE',
             semester: '1st',
             examType: 'Mid-term',
@@ -52,7 +52,7 @@ const Results = () => {
         {
             id: 'RES002',
             studentId: '21001',
-            studentName: 'Md. Rakib Hasan',
+            studentName: 'Md. Sobuj Ahmed',
             class: 'CSE',
             semester: '1st',
             examType: 'Final',
@@ -69,7 +69,7 @@ const Results = () => {
         {
             id: 'RES003',
             studentId: '21001',
-            studentName: 'Md. Rakib Hasan',
+            studentName: 'Md. Sobuj Ahmed',
             class: 'CSE',
             semester: '2nd',
             examType: 'Mid-term',
@@ -154,7 +154,7 @@ const Results = () => {
         {
             id: 'RES008',
             studentId: '21001',
-            studentName: 'Md. Rakib Hasan',
+            studentName: 'Md. Sobuj Ahmed',
             class: 'CSE',
             semester: '2nd',
             examType: 'Final',
@@ -171,7 +171,7 @@ const Results = () => {
         {
             id: 'RES009',
             studentId: '21001',
-            studentName: 'Md. Rakib Hasan',
+            studentName: 'Md. Sobuj Ahmed',
             class: 'CSE',
             semester: '3rd',
             examType: 'Mid-term',
@@ -231,7 +231,7 @@ const Results = () => {
         if (!isAdmin() && result.studentId !== user?.id) {
             return false;
         }
-        
+
         const matchesSearch = result.studentName.toLowerCase().includes(searchTerm.toLowerCase()) ||
             result.studentId.toLowerCase().includes(searchTerm.toLowerCase()) ||
             result.subject.toLowerCase().includes(searchTerm.toLowerCase());
@@ -612,7 +612,7 @@ const Results = () => {
     const totalCredits = filteredResults.reduce((sum, r) => sum + (r.credits || 0), 0);
     const topPerformer = filteredResults.reduce((top, current) =>
         current.percentage > (top?.percentage || 0) ? current : top, null);
-    
+
     // Calculate GPA (simplified: A+=4.0, A=3.75, A-=3.5, B+=3.25, B=3.0, etc.)
     const gradePoints = {
         'A+': 4.0, 'A': 3.75, 'A-': 3.5,

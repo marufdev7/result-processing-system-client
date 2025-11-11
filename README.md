@@ -13,7 +13,7 @@ Implemented a comprehensive student result viewing system that allows students t
 ### 2. Authentication & Login Updates
 **File: `src/pages/login/Login.jsx`**
 - Updated demo student credentials to match results data:
-  - Student ID: 21001 (Md. Rakib Hasan - CSE)
+  - Student ID: 21001 (Md. Sobuj Ahmed - CSE)
   - Student ID: 21002 (Nusrat Jahan - ECE)
   - Student ID: 21003 (Sajid Ahmed - BBA)
   - Password: student123 (for all)
@@ -75,7 +75,7 @@ Implemented a comprehensive student result viewing system that allows students t
 
 ### As Student:
 1. Login with student credentials:
-   - ID: 21001, Password: student123 (Md. Rakib Hasan)
+   - ID: 21001, Password: student123 (Md. Sobuj Ahmed)
    - ID: 21002, Password: student123 (Nusrat Jahan)
    - ID: 21003, Password: student123 (Sajid Ahmed)
 
@@ -155,7 +155,7 @@ const calculatedGPA = filteredResults.length > 0 && totalCredits > 0 ?
 {
     id: 'RES001',
     studentId: '21001',
-    studentName: 'Md. Rakib Hasan',
+    studentName: 'Md. Sobuj Ahmed',
     class: 'CSE',
     semester: '1st',
     examType: 'Mid-term',

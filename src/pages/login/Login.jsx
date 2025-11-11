@@ -19,7 +19,7 @@ const Login = () => {
     };
 
     const STUDENT_CREDENTIALS = [
-        { id: '21001', password: 'student123', name: 'Md. Rakib Hasan', class: 'CSE' },
+        { id: '21001', password: 'student123', name: 'Md. Sobuj Ahmed', class: 'CSE' },
         { id: '21002', password: 'student123', name: 'Nusrat Jahan', class: 'ECE' },
         { id: '21003', password: 'student123', name: 'Sajid Ahmed', class: 'BBA' }
     ];
